@@ -1,1 +1,6 @@
-.git
+#Ignore files named ".git"
+.gitattributes
+.gitignore
+
+#Ignore folder named "charte-graphique"
+charte-graphique/

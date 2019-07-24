@@ -1,14 +1,2 @@
-# dependencies
-node_modules
-bower_components
-
-# compiled output
-/dist
-/.tmp
-
-# System Files
-.DS_Store
-Thumbs.db
-
-#Fichiers source
-source
+#Ignore folder named "charte-graphique"
+charte-graphique/

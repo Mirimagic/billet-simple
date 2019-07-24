@@ -1,2 +1,5 @@
 #Ignore folder named "charte-graphique"
 charte-graphique/
+
+#Ignore file named "Projet4"
+Projet4.codeworkspace

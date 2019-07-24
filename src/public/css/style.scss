@@ -1,0 +1,33 @@
+$color-cream: #f8f8f8;
+$color-lightGrey:#dddfdf;
+$color-text:#383838;
+$color-lightblue:#a9c7d7;
+$color-blue: #6c98b0;
+
+.container{
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/*----BODY----*/
+
+body{
+    background-color: $color-cream;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    color: $color-text;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Advent Pro', Arial, Helvetica, sans-serif;
+}
+
+h2{
+    color: $color-blue;
+}

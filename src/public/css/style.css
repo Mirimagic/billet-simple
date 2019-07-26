@@ -19,9 +19,9 @@ $color-blue: #6c98b0; */
 /*----BODY----*/
 
 body{
-    background-color: #f8f8f8;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    color: #383838;
+    background-color: #f8f8f8 !important;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif !important;
+    color: #383838 !important;
 }
 
 h1, h2, h3, h4{

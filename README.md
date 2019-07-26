@@ -14,8 +14,8 @@ Voici la liste des langages utilisés :
 
 ### Commandes utiles
 Docker :
-* Pour démmarrer Apache : `docker-compose run`
-* Pour mettre à jour Apache : `docker-compose run --build`
+* Pour démmarrer Apache : `docker-compose up`
+* Pour mettre à jour Apache : `docker-compose up --build`
 
 ## Auteur
 Marie-Jo Engeloch

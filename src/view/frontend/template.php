@@ -1,4 +1,6 @@
-<?php require "././vendor/autoload.php"; ?>
+<?php
+require "././vendor/autoload.php";
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -9,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Advent+Pro:400,500|Raleway:400,400i,700,700i&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= $title ?></title>
-    <link href="public/css/style.scss" rel="stylesheet" />
+    <link href="public/css/style.php/style.scss" rel="stylesheet" />
     <!--Ajouter les icon-->
 </head>
 

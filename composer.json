@@ -6,8 +6,7 @@
     "description": "Projet 4 OpenClassrooms",
     "type": "project",
     "require": {
-        "twbs/bootstrap": "^4.3",
-        "leafo/scssphp": "^0.8.4"
+        "twbs/bootstrap": "^4.3"
     },
     "authors": [
         {

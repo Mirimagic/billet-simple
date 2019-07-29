@@ -2,7 +2,37 @@
 
 <?php ob_start(); ?>
 
-<h1>Hello World</h1>
+<section id="last-chapter">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Dernier chapitre</h2>
+            </div>
+        </div>
+        <div class="row" id="display-last-chapter">
+            <div class="row">
+                <div class="col-5 offset-col-1">
+                    <p id="last-chapter-numbre">Chapitre X</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5 offset-col-1">
+                    <h3>Titre du chapitre</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5 offset-col-1">
+                    <button>Lire le chapitre</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>Sorti le DATE – X Commentaire(s)</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php $content = ob_get_clean(); ?>
 

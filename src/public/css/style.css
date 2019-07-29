@@ -77,6 +77,13 @@ footer{
     height: 75%;
 }
 
+.listing-footer{
+ text-align: center;
+}
+
 #copyright{
+    text-align: center;
+    color: #f8f8f8;
+    margin-bottom: 0;
 
 }

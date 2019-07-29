@@ -28,6 +28,10 @@ h1, h2, h3, h4{
     font-family: 'Advent Pro', Arial, Helvetica, sans-serif;
 }
 
+h1{
+    font-size: 3em !important;
+}
+
 h2{
     color: #6c98b0;
 }
@@ -38,6 +42,29 @@ h2{
     height: 50px; 
 }
 
+nav{
+    padding-right: 20% !important;
+    padding-left: 20% !important;
+}
+
 a:link{
     background-color: #f7f8f8 !important;
+}
+
+#Header-img{
+    width: 100%;
+}
+
+#title{
+    background-image: url("../images/Montain.png");
+    background-position: center;
+    background-size: cover;
+    height: 66vh;
+    text-align: center;
+    padding: 50px;
+}
+
+#subtitle{
+    font-family: 'Advent Pro', Arial, Helvetica, sans-serif;
+    font-size: 2em;
 }

@@ -31,3 +31,13 @@ h1, h2, h3, h4{
 h2{
     color: #6c98b0;
 }
+
+/*----HEADER----*/
+
+#logo{
+    height: 50px; 
+}
+
+a:link{
+    background-color: #f7f8f8 !important;
+}

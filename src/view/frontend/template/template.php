@@ -21,9 +21,7 @@ require "vendor/autoload.php";
     <?php require 'navigation.php'; ?>
     <?php require 'header.php'; ?>
     <?= $content ?>
-    <footer>
-
-    </footer>
+    <?php require 'footer.php'; ?>
 </body>
 
 </html>

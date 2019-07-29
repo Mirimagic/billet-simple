@@ -36,7 +36,7 @@ h2{
     color: #6c98b0;
 }
 
-/*----HEADER----*/
+/*----NAVIGATION----*/
 
 #logo{
     height: 50px; 
@@ -45,14 +45,6 @@ h2{
 nav{
     padding-right: 20% !important;
     padding-left: 20% !important;
-}
-
-a:link{
-    background-color: #f7f8f8 !important;
-}
-
-#Header-img{
-    width: 100%;
 }
 
 #title{
@@ -67,4 +59,14 @@ a:link{
 #subtitle{
     font-family: 'Advent Pro', Arial, Helvetica, sans-serif;
     font-size: 2em;
+}
+
+/*----FOOTER----*/
+
+footer{
+    background-color: #a9c7d7
+}
+
+.reseaux{
+    height: 75%;
 }

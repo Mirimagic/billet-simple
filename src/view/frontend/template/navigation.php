@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+<nav class="navbar navbar-expand-md sticky-top navbar-light">
     <a class="navbar-brand" href="#">
         <img src="public/images/Logo.png" id="logo" alt="Logo">
     </a>

@@ -36,6 +36,10 @@ h2{
     color: #6c98b0;
 }
 
+.bold{
+    font-weight: 700;
+}
+
 /*----NAVIGATION----*/
 
 #logo{
@@ -64,9 +68,15 @@ nav{
 /*----FOOTER----*/
 
 footer{
-    background-color: #a9c7d7
+    background-color: #a9c7d7;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .reseaux{
     height: 75%;
+}
+
+#copyright{
+
 }

@@ -42,7 +42,7 @@ h1{
 
 h2{
     color: #6c98b0;
-    margin-top: 1.5rem;
+    margin-top: 1rem !important;
 }
 
 h3{
@@ -121,3 +121,15 @@ footer{
     font-size: 1.75em;
 }
 
+/*----OLD CHAPTER----*/
+
+.old-chapter-picture{
+    max-height: 250px;
+    width: 100%;
+    background-color: lightgray;
+}
+
+.old-chapter{
+    border-bottom: 1px solid #dddfdf;
+    margin-bottom: 15px;
+}

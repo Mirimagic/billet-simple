@@ -41,6 +41,27 @@
                 <h2>Anciens chapitres</h2>
             </div>
         </div>
+        <!-- foreach -->
+        <div class="row old-chapter">
+            <div class="col-3">
+                <img src="public/images/bears-1149459_1920.jpg" alt="" class="old-chapter-picture">
+            </div>
+            <div class="col-9">
+                <h4>Chapitre X – Ceci est un titre</h4>
+                <p>Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibrabat...</p>
+                <p class="date">Sorti le DATE – X Commentaire(s)</p>
+            </div>
+        </div>
+        <div class="row old-chapter">
+            <div class="col-3">
+                <img src="public/images/bears-1149459_1920.jpg" alt="" class="old-chapter-picture">
+            </div>
+            <div class="col-9">
+                <h4>Chapitre X – Ceci est un titre</h4>
+                <p>Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibrabat...</p>
+                <p class="date">Sorti le DATE – X Commentaire(s)</p>
+            </div>
+        </div>
     </div>
 </section>
 

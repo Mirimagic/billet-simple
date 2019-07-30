@@ -34,6 +34,16 @@
     </div>
 </section>
 
+<section id="old-chapters">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Anciens chapitres</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php $content = ob_get_clean(); ?>
 
 <?php require('template/template.php'); ?>

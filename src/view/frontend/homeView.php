@@ -49,7 +49,7 @@
             <div class="col-9">
                 <h4>Chapitre X – Ceci est un titre</h4>
                 <p>Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibrabat...</p>
-                <a href="">Lire la suite</a>
+                <a href="index.php?action=chapter">Lire la suite</a>
                 <p class="date">Sorti le DATE – X Commentaire(s)</p>
             </div>
         </div>
@@ -60,7 +60,7 @@
             <div class="col-9">
                 <h4>Chapitre X – Ceci est un titre</h4>
                 <p>Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibrabat...</p>
-                <a href="">Lire la suite</a>
+                <a href="index.php?action=chapter">Lire la suite</a>
                 <p class="date">Sorti le DATE – X Commentaire(s)</p>
             </div>
         </div>

@@ -134,7 +134,6 @@ footer{
 .old-chapter-picture{
     max-height: 250px;
     width: 100%;
-    background-color: lightgray;
 }
 
 .old-chapter{
@@ -146,3 +145,13 @@ footer{
     margin-bottom: 20px;
     text-align: center;
 }
+
+/*----CHAPTER----*/
+
+.chapter-picture{
+    max-height: 750px;
+    width: 100%;
+}
+
+/*----COMMENT----*/
+

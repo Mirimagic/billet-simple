@@ -16,6 +16,14 @@ $color-blue: #6c98b0; */
     margin-left: -15px;
 }
 
+button{
+    background-color: #6c98b0;
+    border-color: #6c98b0;
+    font-family: 'Advent Pro', Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+    box-shadow: 2px 2px 8px #aaa;
+}
+
 /*----BODY----*/
 
 body{
@@ -37,8 +45,8 @@ h2{
 }
 
 h3{
-    font-size: 2em;
-    margin-bottom: 1.5rem;
+    font-size: 2em !important;
+    margin-bottom: 1.5rem !important;
 }
 
 .bold{

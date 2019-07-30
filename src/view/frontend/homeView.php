@@ -21,8 +21,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-5 offset-1">
-                    <button>Lire le chapitre</button>
+                <div class="offset-1">
+                    <button type="button" class="btn btn-primary">Lire le chapitre</button>
                 </div>
             </div>
         </div>

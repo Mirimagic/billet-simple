@@ -162,8 +162,20 @@ footer{
     max-height: 300px;
     height: 300px;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 /*----COMMENT----*/
 
+.comment{
+    border-bottom: 1px solid #dddfdf;
+    margin-bottom: 15px;
+}
+
+.report-bloc{
+    text-align: right;
+}
+
+.report{
+    color: #bd4b4b !important;
+}

@@ -1,4 +1,4 @@
-<?php $title = 'Accueil' ?>
+<?php $title = 'Chapitre' ?>
 
 <?php ob_start(); ?>
 
@@ -35,6 +35,42 @@
                 <h2>Commentaires</h2>
             </div>
         </div>
+        <!-- foreach -->
+        <div class="row comment">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-10">
+                        <p><span class="bold">NOM</span> – Posté le XX/XX/XXXX à XXhXX</p>
+                    </div>
+                    <div class="col-2 report-bloc">
+                        <a href="" class="report">Signaler</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p> Ceci est un commentaire</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row comment">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-10">
+                        <p><span class="bold">NOM</span> – Posté le XX/XX/XXXX à XXhXX</p>
+                    </div>
+                    <div class="col-2 report-bloc">
+                        <a href="" class="report">Signaler</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p> Ceci est un commentaire</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 

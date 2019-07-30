@@ -15,12 +15,15 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 .chapter-picture">
-                <img src="" alt="">
+            <div class="col-12">
+                <div class="chapter-picture">
+                </div>
             </div>
         </div>
         <div class="row">
-            <p>Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibraba</p>
+            <div class="col-12">
+                <p>Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibraba</p>
+            </div>
         </div>
     </div>
 </section>

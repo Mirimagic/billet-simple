@@ -79,6 +79,8 @@ nav{
     background-color: #f8f8f8 !important;
 }
 
+/*----HEADER----*/
+
 #title{
     background-image: url("../images/Montain.png");
     background-position: center;
@@ -120,6 +122,8 @@ footer{
 
 #display-last-chapter{
     background-color: lightgray;
+    background-position: center;
+    background-size: cover;
     padding-top: 75px;
     padding-bottom: 75px;
 }
@@ -147,10 +151,18 @@ footer{
 }
 
 /*----CHAPTER----*/
+.date-chapter{
+    margin-top: 0;
+}
 
 .chapter-picture{
-    max-height: 750px;
+    background-color: lightgray;
+    background-position: center;
+    background-size: cover;
+    max-height: 300px;
+    height: 300px;
     width: 100%;
+    margin-bottom: 25px;
 }
 
 /*----COMMENT----*/

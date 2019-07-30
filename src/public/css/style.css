@@ -16,20 +16,16 @@ $color-blue: #6c98b0; */
     margin-left: -15px;
 }
 
-button{
-    background-color: #6c98b0;
-    border-color: #6c98b0;
-    font-family: 'Advent Pro', Arial, Helvetica, sans-serif;
-    font-size: 1.25em;
-    box-shadow: 2px 2px 8px #aaa;
-}
-
 /*----BODY----*/
 
 body{
     background-color: #f8f8f8 !important;
     font-family: 'Raleway', Arial, Helvetica, sans-serif !important;
     color: #383838 !important;
+}
+
+p{
+    margin-bottom: 0.5rem !important;
 }
 
 h1, h2, h3, h4{
@@ -48,6 +44,18 @@ h2{
 h3{
     font-size: 2em !important;
     margin-bottom: 1.5rem !important;
+}
+
+button{
+    background-color: #6c98b0 !important;
+    border-color: #6c98b0 !important;
+    font-family: 'Advent Pro', Arial, Helvetica, sans-serif !important;
+    font-size: 1.25em !important;
+    box-shadow: 2px 2px 8px #aaa !important;
+}
+
+a{
+    color: #6c98b0 !important;
 }
 
 .bold{
@@ -132,4 +140,9 @@ footer{
 .old-chapter{
     border-bottom: 1px solid #dddfdf;
     margin-bottom: 15px;
+}
+
+.more-chapters{
+    margin-bottom: 20px;
+    text-align: center;
 }

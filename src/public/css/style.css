@@ -36,8 +36,18 @@ h2{
     color: #6c98b0;
 }
 
+h3{
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+}
+
 .bold{
     font-weight: 700;
+}
+
+.date{
+    font-size: 0.85em;
+    margin-top: 0.5rem;
 }
 
 /*----NAVIGATION----*/
@@ -88,3 +98,17 @@ footer{
     margin-bottom: 0;
 
 }
+
+/*----LAST CHAPTER----*/
+
+#display-last-chapter{
+    background-color: lightgray;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+#last-chapter-numbre{
+    font-family: 'Advent Pro', Arial, Helvetica, sans-serif;
+    font-size: 1.75em;
+}
+

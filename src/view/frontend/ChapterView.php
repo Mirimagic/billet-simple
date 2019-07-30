@@ -71,6 +71,29 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-12">
+                <h2>Ajouter un commentaire</h2>
+            </div>
+        </div>
+
+        <form action="">
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" class="form-control" id="name" placeholder="Nom" required>
+            </div>
+            <div class="form-group">
+                <label for="commentArea">Commentaire</label>
+                <textarea class="form-control" id="commentArea" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="commentCheck" required>
+                    <label class="form-check-label" for="commentCheck">En cochant cette case, je certifie que mon commentaire est respectueux</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary comment-button">Poster le commentaire</button>
+        </form>
     </div>
 </section>
 

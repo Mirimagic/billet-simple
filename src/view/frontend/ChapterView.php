@@ -92,7 +92,7 @@
                     <label class="form-check-label" for="commentCheck">En cochant cette case, je certifie que mon commentaire est respectueux</label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary commentButton">Poster le commentaire</button>
+            <button type="submit" class="btn btn-primary">Poster le commentaire</button>
         </form>
     </div>
 </section>

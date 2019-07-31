@@ -193,3 +193,12 @@ footer{
     margin-bottom: 25px;
 }
 
+/*----LOGIN----*/
+
+#titleAdmin{
+    text-align: center;
+}
+
+#passwordForget{
+    margin-top: 20px;
+}

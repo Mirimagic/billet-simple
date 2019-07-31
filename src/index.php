@@ -11,6 +11,8 @@ try {
             about();
         } elseif ($_GET['action'] == 'contact') {
             contact();
+        } elseif ($_GET['action'] == 'login') {
+            logIn();
         }
     } else {
         home();

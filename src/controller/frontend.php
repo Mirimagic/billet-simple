@@ -19,3 +19,8 @@ function contact()
 {
     require('view/frontend/contactView.php');
 }
+
+function login()
+{
+    require('view/frontend/admin/logInView.php');
+}

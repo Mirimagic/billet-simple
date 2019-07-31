@@ -26,6 +26,7 @@ body{
 
 p{
     margin-bottom: 0.5rem !important;
+    text-align: justify;
 }
 
 h1, h2, h3, h4{
@@ -93,6 +94,7 @@ nav{
 #subtitle{
     font-family: 'Advent Pro', Arial, Helvetica, sans-serif;
     font-size: 2em;
+    text-align: center;
 }
 
 /*----FOOTER----*/
@@ -192,4 +194,6 @@ footer{
     border: 4px solid #dddfdf;
     border-radius: 100%;
     box-shadow: 2px 2px 8px #aaa;
+    margin-bottom: 25px;
 }
+

@@ -14,3 +14,8 @@ function about()
 {
     require('view/frontend/aboutView.php');
 }
+
+function contact()
+{
+    require('view/frontend/contactView.php');
+}

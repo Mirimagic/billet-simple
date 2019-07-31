@@ -9,6 +9,8 @@ try {
             chapter();
         } elseif ($_GET['action'] == 'about') {
             about();
+        } elseif ($_GET['action'] == 'contact') {
+            contact();
         }
     } else {
         home();

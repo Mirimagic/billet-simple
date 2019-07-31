@@ -195,8 +195,16 @@ footer{
 
 /*----LOGIN----*/
 
+#logIn{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
 #titleAdmin{
     text-align: center;
+    margin-bottom: 1rem !important;
+    margin-top: 0 !important;
 }
 
 #passwordForget{

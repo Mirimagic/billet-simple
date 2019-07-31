@@ -29,8 +29,8 @@
                     <button type="submit" class="btn btn-primary">Connexion</button>
                 </form>
                 <div class="row">
-                    <div class="col-12">
-                        <a href="" id="passwordForget">Mot de passe oublié</a>
+                    <div class="col-12" id="passwordForget">
+                        <a href="">Mot de passe oublié</a>
                     </div>
                 </div>
             </div>

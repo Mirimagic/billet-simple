@@ -15,7 +15,6 @@ require "vendor/autoload.php";
     <link href="public/css/style.css" rel="stylesheet" />
     <!--Ajouter les icon-->
     <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
-
 </head>
 
 <body>

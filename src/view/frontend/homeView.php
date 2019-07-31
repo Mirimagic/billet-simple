@@ -2,14 +2,14 @@
 
 <?php ob_start(); ?>
 
-<section id="last-chapter">
+<section id="lastChapter">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <h2>Dernier chapitre</h2>
             </div>
         </div>
-        <div id="display-last-chapter">
+        <div id="displayLastChapter">
             <div class="row">
                 <div class="offset-1">
                     <p id="last-chapter-numbre">Chapitre X</p>
@@ -34,7 +34,7 @@
     </div>
 </section>
 
-<section id="old-chapters">
+<section id="oldChapters">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -42,9 +42,9 @@
             </div>
         </div>
         <!-- foreach -->
-        <div class="row old-chapter">
+        <div class="row oldChapter">
             <div class="col-3">
-                <img src="public/images/bears-1149459_1920.jpg" alt="" class="old-chapter-picture">
+                <img src="public/images/bears-1149459_1920.jpg" alt="" class="oldChapterPicture">
             </div>
             <div class="col-9">
                 <h4>Chapitre X – Ceci est un titre</h4>
@@ -53,9 +53,9 @@
                 <p class="date">Sorti le DATE – X Commentaire(s)</p>
             </div>
         </div>
-        <div class="row old-chapter">
+        <div class="row oldChapter">
             <div class="col-3">
-                <img src="public/images/bears-1149459_1920.jpg" alt="" class="old-chapter-picture">
+                <img src="public/images/bears-1149459_1920.jpg" alt="" class="oldChapterPicture">
             </div>
             <div class="col-9">
                 <h4>Chapitre X – Ceci est un titre</h4>
@@ -64,7 +64,7 @@
                 <p class="date">Sorti le DATE – X Commentaire(s)</p>
             </div>
         </div>
-        <div class="more-chapters">
+        <div class="moreChapters">
             <button type="button" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Charger plus de chapitres</button>
         </div>
     </div>

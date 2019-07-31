@@ -42,7 +42,7 @@
                     <div class="col-10">
                         <p><span class="bold">NOM</span> – Posté le XX/XX/XXXX à XXhXX</p>
                     </div>
-                    <div class="col-2 report-bloc">
+                    <div class="col-2 reportBloc">
                         <a href="" class="report">Signaler</a>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                     <div class="col-10">
                         <p><span class="bold">NOM</span> – Posté le XX/XX/XXXX à XXhXX</p>
                     </div>
-                    <div class="col-2 report-bloc">
+                    <div class="col-2 reportBloc">
                         <a href="" class="report">Signaler</a>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                     <label class="form-check-label" for="commentCheck">En cochant cette case, je certifie que mon commentaire est respectueux</label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary comment-button">Poster le commentaire</button>
+            <button type="submit" class="btn btn-primary commentButton">Poster le commentaire</button>
         </form>
     </div>
 </section>

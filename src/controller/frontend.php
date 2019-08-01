@@ -29,3 +29,8 @@ function homeAdmin()
 {
     require('view/frontend/admin/homeAdminView.php');
 }
+
+function chaptersAdmin()
+{
+    require('view/frontend/admin/chaptersAdminView.php');
+}

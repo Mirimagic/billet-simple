@@ -15,6 +15,8 @@ try {
             logIn();
         } elseif ($_GET['action'] == 'homeAdmin') {
             homeAdmin();
+        } elseif ($_GET['action'] == 'chaptersAdmin') {
+            chaptersAdmin();
         }
     } else {
         home();

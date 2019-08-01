@@ -3,28 +3,28 @@
 <?php ob_start(); ?>
 
 <section id="information">
-    <div class="container">
+    <div class="container groupAdmin">
         <div class="row">
             <div class="col-12">
-                <h3>Gestionnaire</h3>
+                <h2 class="titleGroup">Gestionnaire</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <p>Vous avez <span class="bold">X</span> nouveau messages non-lus.</p>
+                <p class="message">Vous avez <span class="bold">X</span> nouveau messages non-lus.</p>
             </div>
             <div class="col-6">
-                <p>Vous avez <span>X</span> commentaires signalé à modérer.</p>
+                <p class="message"> Vous avez <span class="bold">X</span> commentaires signalé à modérer.</p>
             </div>
         </div>
     </div>
 </section>
 
 <section id="5Chapters">
-    <div class="container">
+    <div class="container groupAdmin">
         <div class="row">
             <div class="col-12">
-                <h3>Les 5 derniers chapitres</h3>
+                <h2 class="titleGroup">Les 5 derniers chapitres</h2>
             </div>
         </div>
         <div class="row">
@@ -41,10 +41,10 @@
 </section>
 
 <section id="5Comments">
-    <div class="container">
+    <div class="container groupAdmin">
         <div class="row">
             <div class="col-12">
-                <h3>Les 5 derniers commentaires</h3>
+                <h2 class="titleGroup">Les 5 derniers commentaires</h2>
             </div>
         </div>
         <div class="row">
@@ -53,7 +53,7 @@
                 <p>Le commentaire</p>
                 <p class="date">Le XX/XX/XXXX à XXhXX</p>
             </div>
-            <div class="col-3">
+            <div class="col-3 separation">
                 <a href="">Retirer le signalement</a><br>
                 <a class="report" href="">Supprimer</a>
             </div>

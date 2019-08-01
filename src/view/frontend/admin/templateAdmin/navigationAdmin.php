@@ -13,7 +13,7 @@
                     <a class="nav-link" href="index.php?action=homeAdmin">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Chapitres</a>
+                    <a class="nav-link" href="index.php?action=chaptersAdmin">Chapitres</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">Commentaires</a>

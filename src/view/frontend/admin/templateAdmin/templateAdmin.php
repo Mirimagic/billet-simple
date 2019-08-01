@@ -18,6 +18,11 @@ require "vendor/autoload.php";
 </head>
 
 <body>
+    <?php if (isset($_GET['action'])) {
+        if ($_GET['action'] == 'homeAdmin') {
+            require 'navigationAdmin.php';
+        }
+    } ?>
     <?= $content ?>
 </body>
 

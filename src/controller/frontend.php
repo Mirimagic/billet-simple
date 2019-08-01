@@ -24,3 +24,8 @@ function login()
 {
     require('view/frontend/admin/logInView.php');
 }
+
+function homeAdmin()
+{
+    require('view/frontend/admin/homeAdminView.php');
+}

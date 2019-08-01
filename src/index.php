@@ -13,6 +13,8 @@ try {
             contact();
         } elseif ($_GET['action'] == 'login') {
             logIn();
+        } elseif ($_GET['action'] == 'homeAdmin') {
+            homeAdmin();
         }
     } else {
         home();

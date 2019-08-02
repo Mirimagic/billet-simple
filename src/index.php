@@ -27,26 +27,18 @@ try {
     echo 'Erreur : ' . $e->getMessage();
 }
 
-/* $mysqli = new mysqli('localhost:3306', 'root', 'example', 'Test');
+/* phpinfo(); */
 
-/*
- * Ceci est le style POO "officiel"
- * MAIS $connect_error était erroné jusqu'en PHP 5.2.9 et 5.3.0.
- */
-/*if ($mysqli->connect_error) {
-    die('Erreur de connexion (' . $mysqli->connect_errno . ') '
-            . $mysqli->connect_error);
+$link = mysqli_connect("172.17.0.2:3306", "root", "example", "Test");
+
+if (!$link) {
+    echo "Erreur : Impossible de se connecter à MySQL." . PHP_EOL;
+    echo "Errno de débogage : " . mysqli_connect_errno() . PHP_EOL;
+    echo "Erreur de débogage : " . mysqli_connect_error() . PHP_EOL;
+    exit;
 }
 
-/*
- * Utilisez cette syntaxe de $connect_error si vous devez assurer
- * la compatibilité avec les versions de PHP avant 5.2.9 et 5.3.0.
- */
-/*deeif (mysqli_connect_error()) {
-    die('Erreur de connexion (' . mysqli_connect_errno() . ') '
-            . mysqli_connect_error());
-}
+echo "Succès : Une connexion correcte à MySQL a été faite! La base de donnée my_db est génial." . PHP_EOL;
+echo "Information d'hôte : " . mysqli_get_host_info($link) . PHP_EOL;
 
-echo 'Succès... ' . $mysqli->host_info . "\n";
-
-$mysqli->close(); */
+mysqli_close($link);

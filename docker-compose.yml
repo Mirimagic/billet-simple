@@ -8,6 +8,8 @@ services:
     build: .
     ports:
       - 80:80
+    links:
+      - db:db
   
   db:
     image: mysql
@@ -17,4 +19,3 @@ services:
       MYSQL_ROOT_PASSWORD: example
     ports:
       - 3306:3306
-      - 33060:33060

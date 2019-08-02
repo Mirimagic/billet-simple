@@ -32,10 +32,10 @@ function homeAdmin()
 
 function chaptersPanelAdmin()
 {
-    require('view/frontend/admin/chaptersAdminView.php');
+    require('view/frontend/admin/chaptersPanelAdminView.php');
 }
 
-function commentsPanelAddmin()
+function comentsPanelAdmin()
 {
-    require('view/frontend/admin/chaptersAdminView.php');
+    require('view/frontend/admin/comentsPanelAdminView.php');
 }

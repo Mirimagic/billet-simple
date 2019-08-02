@@ -17,7 +17,7 @@ try {
             homeAdmin();
         } elseif ($_GET['action'] == 'chaptersPanelAdmin') {
             chaptersPanelAdmin();
-        } elseif ($_GET['action'] == 'comentsPannelAdmin') {
+        } elseif ($_GET['action'] == 'comentsPanelAdmin') {
             comentsPanelAdmin();
         }
     } else {

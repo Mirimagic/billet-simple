@@ -16,7 +16,7 @@
                     <a class="nav-link" href="index.php?action=chaptersPanelAdmin">Chapitres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="commentsPanelAdmin">Commentaires</a>
+                    <a class="nav-link" href="index.php?action=comentsPanelAdmin">Commentaires</a>
                 </li>
             </ul>
         </div>

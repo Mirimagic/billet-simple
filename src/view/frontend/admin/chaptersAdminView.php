@@ -23,7 +23,6 @@
             </div>
         </div>
     </div>
-
 </section>
 
 <?php $content = ob_get_clean(); ?>

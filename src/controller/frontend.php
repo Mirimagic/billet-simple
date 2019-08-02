@@ -30,7 +30,12 @@ function homeAdmin()
     require('view/frontend/admin/homeAdminView.php');
 }
 
-function chaptersAdmin()
+function chaptersPanelAdmin()
+{
+    require('view/frontend/admin/chaptersAdminView.php');
+}
+
+function commentsPanelAddmin()
 {
     require('view/frontend/admin/chaptersAdminView.php');
 }

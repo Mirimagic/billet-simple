@@ -15,8 +15,10 @@ try {
             logIn();
         } elseif ($_GET['action'] == 'homeAdmin') {
             homeAdmin();
-        } elseif ($_GET['action'] == 'chaptersAdmin') {
-            chaptersAdmin();
+        } elseif ($_GET['action'] == 'chaptersPanelAdmin') {
+            chaptersPanelAdmin();
+        } elseif ($_GET['action'] == 'comentsPannelAdmin') {
+            comentsPanelAdmin();
         }
     } else {
         home();

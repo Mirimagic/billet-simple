@@ -6,11 +6,8 @@
     <div class="container groupAdmin">
         <div class="row">
             <div class="col-12">
-                <h2>Gestion des chapitres</h2>
+                <h2>Gestion des commentaires</h2>
             </div>
-        </div>
-        <div id="buttonCreatChapter">
-            <button class="btn btn-primary"><i class="fas fa-plus"></i> Nouveau Chapitre</button>
         </div>
         <div class="row separation">
             <div class="col-9">
@@ -18,8 +15,8 @@
                 <p>Le XX/XX/XXXX – X Commentaires </p>
             </div>
             <div class="col-3">
-                <a href="">Modifier</a><br>
-                <a class="report" href="">Supprimer</a>
+                <p><span class="bold">X</span> commentaires signalés</p>
+                <a href="">Gérer les commentaires</a>
             </div>
         </div>
     </div>

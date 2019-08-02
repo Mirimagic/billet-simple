@@ -13,13 +13,10 @@
                     <a class="nav-link" href="index.php?action=homeAdmin">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=chaptersAdmin">Chapitres</a>
+                    <a class="nav-link" href="index.php?action=chaptersPanelAdmin">Chapitres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Commentaires</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">Messages</a>
+                    <a class="nav-link" href="commentsPanelAdmin">Commentaires</a>
                 </li>
             </ul>
         </div>

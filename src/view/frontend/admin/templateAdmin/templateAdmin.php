@@ -19,7 +19,7 @@ require "vendor/autoload.php";
 
 <body>
     <?php if (isset($_GET['action'])) {
-        if (($_GET['action'] == 'homeAdmin') || ($_GET['action'] == 'chaptersAdmin')) {
+        if (($_GET['action'] == 'homeAdmin') || ($_GET['action'] == 'chaptersPanelAdmin') || ($_GET['action'] == 'commentsPanelAdmin')) {
             require 'navigationAdmin.php';
         }
     } ?>

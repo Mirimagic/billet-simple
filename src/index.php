@@ -29,7 +29,7 @@ try {
 
 /* phpinfo(); */
 
-$link = mysqli_connect("db", "root", "example", "Test");
+$link = mysqli_connect("db", "root", "example", "billet-simple");
 
 if (!$link) {
     echo "Erreur : Impossible de se connecter à MySQL." . PHP_EOL;

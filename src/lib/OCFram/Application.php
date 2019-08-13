@@ -1,5 +1,5 @@
 <?php
-namespace BSFram;
+namespace OCFram;
 
 abstract class Application
 {

@@ -13,7 +13,7 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: example
     volumes:
-      - db_data:/var/lib/mysql
+      - ./db_data:/var/lib/mysql
     ports:
       - 3306:3306
   apache:
@@ -22,5 +22,3 @@ services:
       - 80:80
     links:
       - db
-volumes:
-  db_data:

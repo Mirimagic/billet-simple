@@ -22,7 +22,7 @@ class CommentFormBuilder extends FormBuilder
        ]))
        ->add(new TextField([
         'label' => 'Contenu',
-        'name' => 'contenu',
+        'name' => 'content',
         'rows' => 7,
         'cols' => 50,
         'validators' => [

@@ -21,11 +21,11 @@ abstract class CommentsManager extends Manager
   abstract public function delete($id);
 
   /**
-   * Méthode permettant de supprimer tous les commentaires liés à une news
-   * @param $news L'identifiant de la news dont les commentaires doivent être supprimés
+   * Méthode permettant de supprimer tous les commentaires liés à une chapters
+   * @param $chapters L'identifiant de la chapters dont les commentaires doivent être supprimés
    * @return void
    */
-  abstract public function deleteFromNews($news);
+  abstract public function deleteFromChapters($chapters);
   
   /**
    * Méthode permettant d'enregistrer un commentaire.
@@ -46,10 +46,10 @@ abstract class CommentsManager extends Manager
   
   /**
    * Méthode permettant de récupérer une liste de commentaires.
-   * @param $news La news sur laquelle on veut récupérer les commentaires
+   * @param $chapters La chapters sur laquelle on veut récupérer les commentaires
    * @return array
    */
-  abstract public function getListOf($news);
+  abstract public function getListOf($chapters);
 
   /**
    * Méthode permettant de modifier un commentaire.

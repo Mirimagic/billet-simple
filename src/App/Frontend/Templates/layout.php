@@ -1,41 +1,27 @@
+<?php
+require "../../../vendor/autoload.php";
+?>
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>
-      <?= isset($title) ? $title : 'Mon super site' ?>
-    </title>
-    
-    <meta charset="utf-8" />
-    
-    <link rel="stylesheet" href="/css/Envision.css" type="text/css" />
-  </head>
-  
-  <body>
-    <div id="wrap">
-      <header>
-        <h1><a href="/">Mon super site</a></h1>
-        <p>Comment ça, il n'y a presque rien ?</p>
-      </header>
-      
-      <nav>
-        <ul>
-          <li><a href="/">Accueil</a></li>
-          <?php if ($user->isAuthenticated()) { ?>
-          <li><a href="/admin/">Admin</a></li>
-          <li><a href="/admin/news-insert.html">Ajouter une news</a></li>
-          <?php } ?>
-        </ul>
-      </nav>
-      
-      <div id="content-wrap">
-        <section id="main">
-          <?php if ($user->hasFlash()) echo '<p style="text-align: center;">', $user->getFlash(), '</p>'; ?>
-          
-          <?= $content ?>
-        </section>
-      </div>
-    
-      <footer></footer>
-    </div>
-  </body>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content=""> <!-- A compléter -->
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro:400,500|Raleway:400,400i,700,700i&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/31d8dde4e9.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><?= $title ?></title>
+    <link href="public/css/Envision.css" rel="stylesheet" />
+    <!--Ajouter les icon-->
+    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+</head>
+
+<body>
+    <?php require 'Parts/navigation.php'; ?>
+    <?php require 'Parts/header.php'; ?>
+    <?= $content ?>
+    <?php require 'Parts/footer.php'; ?>
+</body>
+
 </html>

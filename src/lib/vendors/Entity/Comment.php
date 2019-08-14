@@ -5,9 +5,9 @@ use \OCFram\Entity;
 
 class Comment extends Entity
 {
-  protected $news,
+  protected $chapters,
             $auteur,
-            $contenu,
+            $content,
             $date;
 
   const AUTEUR_INVALIDE = 1;
@@ -15,12 +15,12 @@ class Comment extends Entity
 
   public function isValid()
   {
-    return !(empty($this->auteur) || empty($this->contenu));
+    return !(empty($this->auteur) || empty($this->content));
   }
 
-  public function setNews($news)
+  public function setChapters($chapters)
   {
-    $this->news = (int) $news;
+    $this->chapters = (int) $chapters;
   }
 
   public function setAuteur($auteur)
@@ -33,14 +33,14 @@ class Comment extends Entity
     $this->auteur = $auteur;
   }
 
-  public function setContenu($contenu)
+  public function setContenu($content)
   {
-    if (!is_string($contenu) || empty($contenu))
+    if (!is_string($content) || empty($content))
     {
       $this->erreurs[] = self::CONTENU_INVALIDE;
     }
 
-    $this->contenu = $contenu;
+    $this->content = $content;
   }
 
   public function setDate(\DateTime $date)
@@ -48,9 +48,9 @@ class Comment extends Entity
     $this->date = $date;
   }
 
-  public function news()
+  public function chapters()
   {
-    return $this->news;
+    return $this->chapters;
   }
 
   public function auteur()
@@ -58,9 +58,9 @@ class Comment extends Entity
     return $this->auteur;
   }
 
-  public function contenu()
+  public function content()
   {
-    return $this->contenu;
+    return $this->content;
   }
 
   public function date()

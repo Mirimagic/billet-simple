@@ -1,24 +1,24 @@
 <?php
-namespace App\Backend\Modules\News;
+namespace App\Backend\Modules\Chapters;
 
 use \OCFram\BackController;
 use \OCFram\HTTPRequest;
-use \Entity\News;
+use \Entity\Chapters;
 use \Entity\Comment;
 use \FormBuilder\CommentFormBuilder;
-use \FormBuilder\NewsFormBuilder;
+use \FormBuilder\ChaptersFormBuilder;
 use \OCFram\FormHandler;
 
-class NewsController extends BackController
+class HomeController extends BackController
 {
   public function executeDelete(HTTPRequest $request)
   {
-    $newsId = $request->getData('id');
+    $chaptersId = $request->getData('id');
     
-    $this->managers->getManagerOf('News')->delete($newsId);
-    $this->managers->getManagerOf('Comments')->deleteFromNews($newsId);
+    $this->managers->getManagerOf('Chapters')->delete($chaptersId);
+    $this->managers->getManagerOf('Comments')->deleteFromChapters($chaptersId);
 
-    $this->app->user()->setFlash('La news a bien été supprimée !');
+    $this->app->user()->setFlash('La chapters a bien été supprimée !');
 
     $this->app->httpResponse()->redirect('.');
   }
@@ -34,26 +34,26 @@ class NewsController extends BackController
 
   public function executeIndex(HTTPRequest $request)
   {
-    $this->page->addVar('title', 'Gestion des news');
+    $this->page->addVar('title', 'Gestion des chapters');
 
-    $manager = $this->managers->getManagerOf('News');
+    $manager = $this->managers->getManagerOf('Chapters');
 
-    $this->page->addVar('listeNews', $manager->getList());
-    $this->page->addVar('nombreNews', $manager->count());
+    $this->page->addVar('listeChapters', $manager->getList());
+    $this->page->addVar('nombreChapters', $manager->count());
   }
 
   public function executeInsert(HTTPRequest $request)
   {
     $this->processForm($request);
 
-    $this->page->addVar('title', 'Ajout d\'une news');
+    $this->page->addVar('title', 'Ajout d\'une chapters');
   }
 
   public function executeUpdate(HTTPRequest $request)
   {
     $this->processForm($request);
 
-    $this->page->addVar('title', 'Modification d\'une news');
+    $this->page->addVar('title', 'Modification d\'une chapters');
   }
 
   public function executeUpdateComment(HTTPRequest $request)
@@ -64,8 +64,8 @@ class NewsController extends BackController
     {
       $comment = new Comment([
         'id' => $request->getData('id'),
-        'auteur' => $request->postData('auteur'),
-        'contenu' => $request->postData('contenu')
+        'chapterNumber' => $request->postData('chapterNumber'),
+        'content' => $request->postData('content')
       ]);
     }
     else
@@ -94,40 +94,40 @@ class NewsController extends BackController
   {
     if ($request->method() == 'POST')
     {
-      $news = new News([
-        'auteur' => $request->postData('auteur'),
-        'titre' => $request->postData('titre'),
-        'contenu' => $request->postData('contenu')
+      $chapters = new Chapters([
+        'chapterNumber' => $request->postData('chapterNumber'),
+        'title' => $request->postData('title'),
+        'content' => $request->postData('content')
       ]);
 
       if ($request->getExists('id'))
       {
-        $news->setId($request->getData('id'));
+        $chapters->setId($request->getData('id'));
       }
     }
     else
     {
-      // L'identifiant de la news est transmis si on veut la modifier
+      // L'identifiant de la chapters est transmis si on veut la modifier
       if ($request->getExists('id'))
       {
-        $news = $this->managers->getManagerOf('News')->getUnique($request->getData('id'));
+        $chapters = $this->managers->getManagerOf('Chapters')->getUnique($request->getData('id'));
       }
       else
       {
-        $news = new News;
+        $chapters = new Chapters;
       }
     }
 
-    $formBuilder = new NewsFormBuilder($news);
+    $formBuilder = new ChaptersFormBuilder($chapters);
     $formBuilder->build();
 
     $form = $formBuilder->form();
 
-    $formHandler = new FormHandler($form, $this->managers->getManagerOf('News'), $request);
+    $formHandler = new FormHandler($form, $this->managers->getManagerOf('Chapters'), $request);
 
     if ($formHandler->process())
     {
-      $this->app->user()->setFlash($news->isNew() ? 'La news a bien été ajoutée !' : 'La news a bien été modifiée !');
+      $this->app->user()->setFlash($chapters->isNew() ? 'La chapters a bien été ajoutée !' : 'La chapters a bien été modifiée !');
       
       $this->app->httpResponse()->redirect('/admin/');
     }

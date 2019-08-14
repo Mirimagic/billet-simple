@@ -1,7 +1,5 @@
 <?php $title = 'Accueil' ?>
 
-<?php ob_start(); ?>
-
 <section id="lastChapter">
     <div class="container">
         <div class="row">
@@ -44,7 +42,7 @@
         <!-- foreach -->
         <div class="row oldChapter">
             <div class="col-3">
-                <img src="public/images/bears-1149459_1920.jpg" alt="" class="oldChapterPicture">
+                <img src="/images/bears-1149459_1920.jpg" alt="" class="oldChapterPicture">
             </div>
             <div class="col-9">
                 <h4>Chapitre X – Ceci est un title</h4>
@@ -55,7 +53,7 @@
         </div>
         <div class="row oldChapter">
             <div class="col-3">
-                <img src="public/images/bears-1149459_1920.jpg" alt="" class="oldChapterPicture">
+                <img src="/images/bears-1149459_1920.jpg" alt="" class="oldChapterPicture">
             </div>
             <div class="col-9">
                 <h4>Chapitre X – Ceci est un title</h4>
@@ -69,5 +67,3 @@
         </div>
     </div>
 </section>
-
-<?php $content = ob_get_clean(); ?>

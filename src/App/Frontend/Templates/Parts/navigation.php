@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md static-top navbar-light">
     <a class="navbar-brand" href="index.php?action=home">
-        <img src="public/images/Logo.png" id="logo" alt="Logo">
+        <img src="/images/Logo.png" id="logo" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

@@ -2,16 +2,16 @@
     <div class="container">
         <div class="row">
             <div class="listingFooter col-1 offset-4">
-                <a href=""><img src="Web/images/reseaux/facebook.png" alt="Facebook" class="reseaux"></a>
+                <a href=""><img src="/images/reseaux/facebook.png" alt="Facebook" class="reseaux"></a>
             </div>
             <div class="listingFooter col-1">
-                <a href=""><img src="Web/images/reseaux/twitter.png" alt="Twitter" class="reseaux"></a>
+                <a href=""><img src="/images/reseaux/twitter.png" alt="Twitter" class="reseaux"></a>
             </div>
             <div class="listingFooter col-1">
-                <a href=""><img src="Web/images/reseaux/instagram.png" alt="Instagram" class="reseaux"></a>
+                <a href=""><img src="/images/reseaux/instagram.png" alt="Instagram" class="reseaux"></a>
             </div>
             <div class="listingFooter col-1">
-                <a href=""><img src="Web/images/reseaux/linkedin.png" alt="Linkedin" class="reseaux"></a>
+                <a href=""><img src="/images/reseaux/linkedin.png" alt="Linkedin" class="reseaux"></a>
             </div>
         </div>
         <div class="row">

@@ -1,5 +1,5 @@
 <?php
-require "../../../vendor/autoload.php";
+require __DIR__."/../../../vendor/autoload.php";
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +12,9 @@ require "../../../vendor/autoload.php";
     <script src="https://kit.fontawesome.com/31d8dde4e9.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= $title ?></title>
-    <link href="public/css/Envision.css" rel="stylesheet" />
-    <!--Ajouter les icon-->
-    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+    <!--Ajouter les icon--> 
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>

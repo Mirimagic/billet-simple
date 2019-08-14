@@ -1,5 +1,5 @@
 <?php
-namespace App\Frontend\Modules\Chapters;
+namespace App\Frontend\Modules\Home;
 
 use \OCFram\BackController;
 use \OCFram\HTTPRequest;
@@ -11,22 +11,22 @@ class HomeController extends BackController
 {
   public function executeIndex(HTTPRequest $request)
   {
-    $nombreChapters = $this->app->config()->get('number_chapters');
-    $nombreCaracteres = $this->app->config()->get('number_caracters');
+    $numberChapters = $this->app->config()->get('number_chapters');
+    $numberCaracters = $this->app->config()->get('number_caracters');
     
     // On ajoute une définition pour le title.
-    $this->page->addVar('title', 'Liste des '.$nombreChapters.' dernières chapters');
+    $this->page->addVar('title', 'Liste des '.$numberChapters.' dernières chapters');
     
     // On récupère le manager des chapters.
     $manager = $this->managers->getManagerOf('Chapters');
     
-    $listeChapters = $manager->getList(0, $nombreChapters);
+    $listeChapters = $manager->getList(0, $numberChapters);
     
     foreach ($listeChapters as $chapters)
     {
-      if (strlen($chapters->content()) > $nombreCaracteres)
+      if (strlen($chapters->content()) > $numberCaracters)
       {
-        $debut = substr($chapters->content(), 0, $nombreCaracteres);
+        $debut = substr($chapters->content(), 0, $numberCaracters);
         $debut = substr($debut, 0, strrpos($debut, ' ')) . '...';
         
         $chapters->setContenu($debut);

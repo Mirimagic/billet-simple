@@ -39,7 +39,7 @@ class HomeController extends BackController
     $manager = $this->managers->getManagerOf('Chapters');
 
     $this->page->addVar('listeChapters', $manager->getList());
-    $this->page->addVar('nombreChapters', $manager->count());
+    $this->page->addVar('numberChapters', $manager->count());
   }
 
   public function executeInsert(HTTPRequest $request)

@@ -14,22 +14,19 @@ class HomeController extends BackController
     $numberChapters = $this->app->config()->get('number_chapters');
     $numberCaracters = $this->app->config()->get('number_caracters');
     
-    // On ajoute une définition pour le title.
-    $this->page->addVar('title', 'Liste des '.$numberChapters.' dernières chapters');
-    
     // On récupère le manager des chapters.
     $manager = $this->managers->getManagerOf('Chapters');
     
     $listeChapters = $manager->getList(0, $numberChapters);
     
-    foreach ($listeChapters as $chapters)
+    foreach ($listeChapters as $chapter)
     {
-      if (strlen($chapters->content()) > $numberCaracters)
+      if (strlen($chapter->content()) > $numberCaracters)
       {
-        $debut = substr($chapters->content(), 0, $numberCaracters);
-        $debut = substr($debut, 0, strrpos($debut, ' ')) . '...';
+        $start = substr($chapter->content(), 0, $numberCaracters);
+        $start = substr($start, 0, strrpos($start, ' ')) . '...';
         
-        $chapters->setContenu($debut);
+        $chapter->setContent($start);
       }
     }
     

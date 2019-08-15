@@ -33,7 +33,7 @@ class Comment extends Entity
     $this->auteur = $auteur;
   }
 
-  public function setContenu($content)
+  public function setContent($content)
   {
     if (!is_string($content) || empty($content))
     {

@@ -39,29 +39,22 @@
                 <h2>Anciens chapitres</h2>
             </div>
         </div>
-        <!-- foreach -->
+
+        <?php
+        foreach ($listeChapters as $chapter) { ?>
         <div class="row oldChapter">
             <div class="col-3">
                 <img src="/images/bears-1149459_1920.jpg" alt="" class="oldChapterPicture">
             </div>
             <div class="col-9">
-                <h4>Chapitre X – Ceci est un title</h4>
-                <p>Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibrabat...</p>
-                <a href="index.php?action=chapter">Lire la suite</a>
-                <p class="date">Sorti le DATE – X Commentaire(s)</p>
+                <h4>Chapitre <?=$chapter['chapterNumber']?> – <?=$chapter['title']?></h4>
+                <p><?=nl2br($chapter['content'])?></p>
+                <a href="chapter-<?=$chapter['id']?>.html">Lire la suite</a>
+                <p class="date">Sorti le <?=$chapter['dateAddFr']?>  – X Commentaire(s)</p>
             </div>
         </div>
-        <div class="row oldChapter">
-            <div class="col-3">
-                <img src="/images/bears-1149459_1920.jpg" alt="" class="oldChapterPicture">
-            </div>
-            <div class="col-9">
-                <h4>Chapitre X – Ceci est un title</h4>
-                <p>Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibrabat...</p>
-                <a href="index.php?action=chapter">Lire la suite</a>
-                <p class="date">Sorti le DATE – X Commentaire(s)</p>
-            </div>
-        </div>
+            <?php
+        } ?>
         <div class="moreChapters">
             <button type="button" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Charger plus de chapitres</button>
         </div>

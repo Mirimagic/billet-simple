@@ -25,13 +25,13 @@ class ChaptersManagerPDO extends ChaptersManager
     $this->dao->exec('DELETE FROM chapters WHERE id = '.(int) $id);
   }
 
-  public function getList($debut = -1, $limite = -1)
+  public function getList($start = -1, $limite = -1)
   {
-    $sql = 'SELECT id, chapterNumber, title, content, dateAdd, dateUpdate FROM chapters ORDER BY id DESC';
+    $sql = 'SELECT id, chapterNumber, title, content, DATE_FORMAT(dateAdd, \'%d/%m/%Y à %Hh%i\') AS dateAddFr, DATE_FORMAT(dateUpdate, \'%d/%m/%Y à %Hh%i\') AS dateUpdateFr FROM chapters ORDER BY id DESC';
     
-    if ($debut != -1 || $limite != -1)
+    if ($start != -1 || $limite != -1)
     {
-      $sql .= ' LIMIT '.(int) $limite.' OFFSET '.(int) $debut;
+      $sql .= ' LIMIT '.(int) $limite.' OFFSET '.(int) $start;
     }
     
     $requete = $this->dao->query($sql);
@@ -52,7 +52,7 @@ class ChaptersManagerPDO extends ChaptersManager
   
   public function getUnique($id)
   {
-    $requete = $this->dao->prepare('SELECT id, chapterNumber, title, content, dateAdd, dateUpdate FROM chapters WHERE id = :id');
+    $requete = $this->dao->prepare('SELECT id, chapterNumber, title, content, DATE_FORMAT(dateAdd, \'%d/%m/%Y à %Hh%i\') AS dateAddFr, DATE_FORMAT(dateUpdate, \'%d/%m/%Y à %Hh%i\') AS dateUpdateFr FROM chapters WHERE id = :id');
     $requete->bindValue(':id', (int) $id, \PDO::PARAM_INT);
     $requete->execute();
     

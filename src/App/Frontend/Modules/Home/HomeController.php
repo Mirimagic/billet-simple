@@ -55,7 +55,7 @@ class HomeController extends BackController
     {
       $comment = new Comment([
         'chapters' => $request->getData('chapters'),
-        'auteur' => $request->postData('auteur'),
+        'author' => $request->postData('author'),
         'content' => $request->postData('content')
       ]);
     }

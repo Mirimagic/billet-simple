@@ -7,10 +7,10 @@ class CommentsManagerPDO extends CommentsManager
 {
   protected function add(Comment $comment)
   {
-    $q = $this->dao->prepare('INSERT INTO comments SET chapters = :chapters, auteur = :auteur, content = :content, date = NOW()');
+    $q = $this->dao->prepare('INSERT INTO comments SET chapters = :chapters, author = :author, content = :content, date = NOW()');
     
     $q->bindValue(':chapters', $comment->chapters(), \PDO::PARAM_INT);
-    $q->bindValue(':auteur', $comment->auteur());
+    $q->bindValue(':author', $comment->author());
     $q->bindValue(':content', $comment->content());
     
     $q->execute();
@@ -35,7 +35,7 @@ class CommentsManagerPDO extends CommentsManager
       throw new \InvalidArgumentException('L\'identifiant de la chapters passé doit être un nombre entier valide');
     }
     
-    $q = $this->dao->prepare('SELECT id, chapters, auteur, content, date FROM comments WHERE chapters = :chapters');
+    $q = $this->dao->prepare('SELECT id, chapters, author, content, date FROM comments WHERE chapters = :chapters');
     $q->bindValue(':chapters', $chapters, \PDO::PARAM_INT);
     $q->execute();
     
@@ -53,9 +53,9 @@ class CommentsManagerPDO extends CommentsManager
 
   protected function modify(Comment $comment)
   {
-    $q = $this->dao->prepare('UPDATE comments SET auteur = :auteur, content = :content WHERE id = :id');
+    $q = $this->dao->prepare('UPDATE comments SET author = :author, content = :content WHERE id = :id');
     
-    $q->bindValue(':auteur', $comment->auteur());
+    $q->bindValue(':author', $comment->author());
     $q->bindValue(':content', $comment->content());
     $q->bindValue(':id', $comment->id(), \PDO::PARAM_INT);
     
@@ -64,7 +64,7 @@ class CommentsManagerPDO extends CommentsManager
   
   public function get($id)
   {
-    $q = $this->dao->prepare('SELECT id, chapters, auteur, content FROM comments WHERE id = :id');
+    $q = $this->dao->prepare('SELECT id, chapters, author, content FROM comments WHERE id = :id');
     $q->bindValue(':id', (int) $id, \PDO::PARAM_INT);
     $q->execute();
     

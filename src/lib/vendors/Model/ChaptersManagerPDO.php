@@ -60,7 +60,7 @@ class ChaptersManagerPDO extends ChaptersManager
     
     if ($chapters = $requete->fetch())
     {
-      $chapters->setDateAjout(new \DateTime($chapters->DateAdd()));
+      $chapters->setDateAdd(new \DateTime($chapters->DateAdd()));
       $chapters->setDateUpdate(new \DateTime($chapters->dateUpdate()));
       
       return $chapters;

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= $title ?></title>
     <!--Ajouter les icon--> 
-    <link rel="stylesheet" href="./../../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 

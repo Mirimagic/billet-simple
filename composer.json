@@ -1,0 +1,16 @@
+{
+    "name": "mariejo/billet-simple",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Mirimagic",
+            "email": "mariejo.engeloch@gmail.com"
+        }
+    ],
+    "require": {
+        "twbs/bootstrap": "^4.3"
+    },
+    "config": {
+        "vendor-dir": "src/vendor"
+    }
+}

@@ -9,7 +9,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <p class="date">Sorti le <?=$chapters['dateAddFr']?></p>
+                <p class="date">Sorti le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?></p>
             </div>
         </div>
         <div class="row">

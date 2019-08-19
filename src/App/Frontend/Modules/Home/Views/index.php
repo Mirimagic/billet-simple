@@ -49,7 +49,7 @@
             <div class="col-9">
                 <h4>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h4>
                 <p><?=nl2br($chapters['content'])?></p>
-                <a href="chapters-<?=$chapters['id']?>.html">Lire la suite</a>
+                <a href="chapitre-<?=$chapters['id']?>.html">Lire la suite</a>
                 <p class="date">Sorti le <?=$chapters['dateAddFr']?>  – X Commentaire(s)</p>
             </div>
         </div>

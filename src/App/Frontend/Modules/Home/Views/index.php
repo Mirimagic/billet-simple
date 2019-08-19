@@ -10,7 +10,7 @@
         <div id="displayLastChapter">
             <div class="row">
                 <div class="offset-1">
-                    <p id="last-chapter-numbre">Chapitre X</p>
+                    <p id="last-chapters-numbre">Chapitre X</p>
                 </div>
             </div>
             <div class="row">
@@ -41,16 +41,16 @@
         </div>
 
         <?php
-        foreach ($listeChapters as $chapter) { ?>
+        foreach ($listeChapters as $chapters) { ?>
         <div class="row oldChapter">
             <div class="col-3">
                 <img src="/images/bears-1149459_1920.jpg" alt="" class="oldChapterPicture">
             </div>
             <div class="col-9">
-                <h4>Chapitre <?=$chapter['chapterNumber']?> – <?=$chapter['title']?></h4>
-                <p><?=nl2br($chapter['content'])?></p>
-                <a href="chapter-<?=$chapter['id']?>.html">Lire la suite</a>
-                <p class="date">Sorti le <?=$chapter['dateAddFr']?>  – X Commentaire(s)</p>
+                <h4>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h4>
+                <p><?=nl2br($chapters['content'])?></p>
+                <a href="chapters-<?=$chapters['id']?>.html">Lire la suite</a>
+                <p class="date">Sorti le <?=$chapters['dateAddFr']?>  – X Commentaire(s)</p>
             </div>
         </div>
             <?php

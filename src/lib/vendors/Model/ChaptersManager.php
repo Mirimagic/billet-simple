@@ -11,7 +11,7 @@ abstract class ChaptersManager extends Manager
    * @param $chapters Chapters La chapters à ajouter
    * @return void
    */
-  abstract protected function add(Chapters $chapter);
+  abstract protected function add(Chapters $chapters);
   
   /**
    * Méthode permettant d'enregistrer une chapters.
@@ -20,11 +20,11 @@ abstract class ChaptersManager extends Manager
    * @see self::modify()
    * @return void
    */
-  public function save(Chapters $chapter)
+  public function save(Chapters $chapters)
   {
-    if ($chapter->isValid())
+    if ($chapters->isValid())
     {
-      $chapter->isNew() ? $this->add($chapter) : $this->modify($chapter);
+      $chapters->isNew() ? $this->add($chapters) : $this->modify($chapters);
     }
     else
     {
@@ -65,5 +65,5 @@ abstract class ChaptersManager extends Manager
    * @param $chapters chapters la chapters à modifier
    * @return void
    */
-  abstract protected function modify(Chapters $chapter);
+  abstract protected function modify(Chapters $chapters);
 }

@@ -5,8 +5,8 @@ try {
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'home') {
             home();
-        } elseif ($_GET['action'] == 'chapter') {
-            chapter();
+        } elseif ($_GET['action'] == 'chapters') {
+            chapters();
         } elseif ($_GET['action'] == 'about') {
             about();
         } elseif ($_GET['action'] == 'contact') {

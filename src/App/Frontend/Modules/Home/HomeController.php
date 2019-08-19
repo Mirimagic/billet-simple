@@ -19,14 +19,14 @@ class HomeController extends BackController
     
     $listeChapters = $manager->getList(0, $numberChapters);
     
-    foreach ($listeChapters as $chapter)
+    foreach ($listeChapters as $chapters)
     {
-      if (strlen($chapter->content()) > $numberCaracters)
+      if (strlen($chapters->content()) > $numberCaracters)
       {
-        $start = substr($chapter->content(), 0, $numberCaracters);
+        $start = substr($chapters->content(), 0, $numberCaracters);
         $start = substr($start, 0, strrpos($start, ' ')) . '...';
         
-        $chapter->setContent($start);
+        $chapters->setContent($start);
       }
     }
     

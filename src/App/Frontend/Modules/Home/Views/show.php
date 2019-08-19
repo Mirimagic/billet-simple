@@ -4,23 +4,23 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Chapitre <?=$chapter['chapterNumber']?> – <?=$chapter['title']?></h2>
+                <h2>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h2>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <p class="date">Sorti le <?=$chapter['dateAddFr']?></p>
+                <p class="date">Sorti le <?=$chapters['dateAddFr']?></p>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="chapter-picture">
+                <div class="chapters-picture">
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <p><?=nl2br($chapter['content'])?></p>
+                <p><?=nl2br($chapters['content'])?></p>
             </div>
         </div>
     </div>

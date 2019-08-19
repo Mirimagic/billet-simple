@@ -5,7 +5,7 @@ function home()
     require('view/frontend/homeView.php');
 }
 
-function chapter()
+function chapters()
 {
     require('view/frontend/chapterView.php');
 }

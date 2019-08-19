@@ -16,7 +16,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="chapter-picture">
+                <div class="chapters-picture">
                 </div>
             </div>
         </div>

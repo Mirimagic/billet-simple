@@ -75,7 +75,7 @@ class HomeController extends BackController
     {
       $this->app->user()->setFlash('Le commentaire a bien été ajouté, merci !');
       
-      $this->app->httpResponse()->redirect('chapters-'.$request->getData('chapters').'.html');
+      $this->app->httpResponse()->redirect('chapitre-'.$request->getData('chapters').'.html');
     }
 
     $this->page->addVar('comment', $comment);

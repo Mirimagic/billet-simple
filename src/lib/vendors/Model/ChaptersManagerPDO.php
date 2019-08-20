@@ -65,7 +65,6 @@ class ChaptersManagerPDO extends ChaptersManager
       
       return $chapters;
     }
-    
     return null;
   }
 

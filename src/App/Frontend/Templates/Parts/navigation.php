@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md static-top navbar-light">
-    <a class="navbar-brand" href="index.php?action=home">
+    <a class="navbar-brand" href="">
         <img src="/images/Logo.png" id="logo" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,10 +10,10 @@
         <div class="navbar-nav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=home">Accueil</a>
+                    <a class="nav-link" href="">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=about">À propos</a>
+                    <a class="nav-link" href="APropos">À propos</a>
                 </li>
             </ul>
         </div>

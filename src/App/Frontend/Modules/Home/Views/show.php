@@ -34,11 +34,22 @@
             </div>
         </div>
         <!-- foreach -->
+        <?php
+        if (empty($comments))
+        {
+        ?>
+        <p>Aucun commentaire n'a encore été posté. Soyez le premier à en laisser un !</p>
+        <?php
+        }
+
+        foreach($comments as $comment)
+        {
+        ?>
         <div class="row comment">
             <div class="col-12">
                 <div class="row">
                     <div class="col-10">
-                        <p><span class="bold">NOM</span> – Posté le XX/XX/XXXX à XXhXX</p>
+                        <p><span class="bold"><?=htmlspecialchars($comment['author'])?></span> – Posté le <?=$comment['date']->format('d/m/Y à H:i')?></p>
                     </div>
                     <div class="col-2 reportBloc">
                         <a href="" class="report">Signaler</a>
@@ -46,51 +57,16 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <p> Ceci est un commentaire</p>
+                        <p><?= nl2br(htmlspecialchars($comment['content']))?></p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row comment">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-10">
-                        <p><span class="bold">NOM</span> – Posté le XX/XX/XXXX à XXhXX</p>
-                    </div>
-                    <div class="col-2 reportBloc">
-                        <a href="" class="report">Signaler</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <p> Ceci est un commentaire</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php
+        }
+        ?>
 
-        <div class="row">
-            <div class="col-12">
-                <h2>Ajouter un commentaire</h2>
-            </div>
-        </div>
+        <a href="commenter-<?=$chapters['id']?>.html" class="btn btn-primary" role="button">Ajouter un commentaire</a>
 
-        <form action="">
-            <div class="form-group">
-                <label for="name">Nom</label>
-                <input type="text" class="form-control" id="name" placeholder="Nom" required>
-            </div>
-            <div class="form-group">
-                <label for="commentArea">Commentaire</label>
-                <textarea class="form-control" id="commentArea" rows="3" required></textarea>
-            </div>
-            <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="commentCheck" required>
-                    <label class="form-check-label" for="commentCheck">En cochant cette case, je certifie que mon commentaire est respectueux</label>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Poster le commentaire</button>
-        </form>
     </div>
 </section>

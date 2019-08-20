@@ -66,7 +66,7 @@
         }
         ?>
 
-        <a href="commenter-<?=$chapters['id']?>.html" class="btn btn-primary" role="button">Ajouter un commentaire</a>
+        <a href="commenter-<?=$chapters['id']?>.html" class="btn btn-primary" id="AddComment"role="button">Ajouter un commentaire</a>
 
     </div>
 </section>

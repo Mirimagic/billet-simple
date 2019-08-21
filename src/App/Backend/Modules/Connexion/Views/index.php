@@ -7,7 +7,7 @@
                         <h2 id="titleAdmin">Bienvenu sur l'espace d'administration</h2>
                     </div>
                 </div>
-                <form action="" method="post">
+                <form action="/admin/connexion/" method="post">
                     <div class="form-group">
                         <label for="login">Login</label>
                         <input type="text" id="login" class="form-control" placeholder="Login" required>
@@ -28,3 +28,5 @@
         </div>
     </div>
 </section>
+
+<?php phpinfo();

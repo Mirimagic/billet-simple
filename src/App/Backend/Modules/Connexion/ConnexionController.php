@@ -14,7 +14,8 @@ class ConnexionController extends BackController
     {
       $login = $request->postData('login');
       $password = $request->postData('password');
-      
+      var_dump($login .' '. $password);
+      die();
       if ($login == $this->app->config()->get('login') && $password == $this->app->config()->get('pass'))
       {
         $this->app->user()->setAuthenticated(true);

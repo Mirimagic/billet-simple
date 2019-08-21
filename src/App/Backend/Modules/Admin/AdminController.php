@@ -9,7 +9,7 @@ use \FormBuilder\CommentFormBuilder;
 use \FormBuilder\ChaptersFormBuilder;
 use \OCFram\FormHandler;
 
-class HomeController extends BackController
+class AdminController extends BackController
 {
   public function executeDelete(HTTPRequest $request)
   {
@@ -18,7 +18,7 @@ class HomeController extends BackController
     $this->managers->getManagerOf('Chapters')->delete($chaptersId);
     $this->managers->getManagerOf('Comments')->deleteFromChapters($chaptersId);
 
-    $this->app->user()->setFlash('La chapters a bien été supprimée !');
+    $this->app->user()->setFlash('Le chapitre a bien été supprimée !');
 
     $this->app->httpResponse()->redirect('.');
   }
@@ -34,7 +34,7 @@ class HomeController extends BackController
 
   public function executeIndex(HTTPRequest $request)
   {
-    $this->page->addVar('title', 'Gestion des chapters');
+    $this->page->addVar('title', 'Gestion des chapitres');
 
     $manager = $this->managers->getManagerOf('Chapters');
 
@@ -46,14 +46,14 @@ class HomeController extends BackController
   {
     $this->processForm($request);
 
-    $this->page->addVar('title', 'Ajout d\'une chapters');
+    $this->page->addVar('title', 'Ajout d\'un chapitre');
   }
 
   public function executeUpdate(HTTPRequest $request)
   {
     $this->processForm($request);
 
-    $this->page->addVar('title', 'Modification d\'une chapters');
+    $this->page->addVar('title', 'Modification d\'un chapitre');
   }
 
   public function executeUpdateComment(HTTPRequest $request)

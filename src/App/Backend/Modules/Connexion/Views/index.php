@@ -7,14 +7,14 @@
                         <h2 id="titleAdmin">Bienvenu sur l'espace d'administration</h2>
                     </div>
                 </div>
-                <form action="/admin/connexion/" method="post">
+                <form action="" method="post">
                     <div class="form-group">
                         <label for="login">Login</label>
-                        <input type="text" id="login" class="form-control" placeholder="Login" required>
+                        <input type="text" id="login" class="form-control" placeholder="Login" name="login" required>
                     </div>
                     <div class="form-group">
                         <label for="password">Mot de passe</label>
-                        <input type="password" id="password" class="form-control" placeholder="Mot de passe" required>
+                        <input type="password" id="password" class="form-control" placeholder="Mot de passe" name="password" required>
                     </div>
                     <div class="form-group">
                         <div class="form-check">

@@ -9,7 +9,7 @@ use \FormBuilder\CommentFormBuilder;
 use \FormBuilder\ChaptersFormBuilder;
 use \OCFram\FormHandler;
 
-class AdminController extends BackController
+class ChaptersController extends BackController
 {
   public function executeDelete(HTTPRequest $request)
   {

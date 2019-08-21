@@ -1,5 +1,3 @@
-<?php $title = 'Administration' ?>
-
 <section id="login">
     <div class="container">
         <div class="row">
@@ -11,7 +9,7 @@
                 </div>
                 <form action="" method="post">
                     <div class="form-group">
-                        <label for="login">Email</label>
+                        <label for="login">Login</label>
                         <input type="text" id="login" class="form-control" placeholder="Login" required>
                     </div>
                     <div class="form-group">

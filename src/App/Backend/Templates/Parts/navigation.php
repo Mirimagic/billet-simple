@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md static-top navbar-light">
-    <a class="navbar-brand" href="index.php?action=homeAdmin">
-        <img src="public/images/Logo.png" id="logo" alt="Logo">
+    <a class="navbar-brand" href="admin/">
+        <img src="/images/Logo.png" id="logo" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -10,13 +10,13 @@
         <div class="navbar-nav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=homeAdmin">Accueil</a>
+                    <a class="nav-link" href="admin/">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=chaptersPanelAdmin">Chapitres</a>
+                    <a class="nav-link" href="">Chapitres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=comentsPanelAdmin">Commentaires</a>
+                    <a class="nav-link" href="">Commentaires</a>
                 </li>
             </ul>
         </div>

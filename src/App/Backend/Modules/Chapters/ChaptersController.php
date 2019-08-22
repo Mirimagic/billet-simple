@@ -127,7 +127,7 @@ class ChaptersController extends BackController
 
     if ($formHandler->process())
     {
-      $this->app->user()->setFlash($chapters->isNew() ? 'La chapters a bien été ajoutée !' : 'La chapters a bien été modifiée !');
+      $this->app->user()->setFlash($chapters->isNew() ? 'Le chapitre a bien été ajoutée !' : 'La chapters a bien été modifiée !');
       
       $this->app->httpResponse()->redirect('/admin/');
     }

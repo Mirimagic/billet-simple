@@ -23,22 +23,24 @@
             </div>
         </div>
         <?php
-        foreach($listeChapters as $Chapters)
+        foreach($listeChapters as $chapters)
         {
         ?>
         <div class="row separation">
             <div class="col-9">
-                <h4>Chapitre <?=$Chapters['ChaptersNumber']?> – <?=$Chapters['title']?></h4>
-                <p>Le <?=$Chapters['dateAdd']->format('d/m/Y à H:i')?> – X Commentaires </p>
+                <h4>Chapitre <?=$chapters['ChaptersNumber']?> – <?=$chapters['title']?></h4>
+                <p>Le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?> – X Commentaires </p>
             </div>
             <div class="col-3">
-                <a href="modifier-chapitre-<?=$Chapters['id']?>.html">Modifier</a><br>
-                <a class="report" href="supprimer-chapitre-<?=$Chapters['id']?>.html">Supprimer</a>
+                <a href="modifier-chapitre-<?=$chapters['id']?>.html">Modifier</a><br>
+                <a class="report" href="supprimer-chapitre-<?=$chapters['id']?>.html">Supprimer</a>
             </div>
         </div>
         <?php
         }?>
-        
+        <div id="buttonCreatChapter">
+            <a href="admin/nouveau-chapitre\.html?>.html" class="btn btn-primary" id="AddComment"role="button">Nouveau Chapitre</a>
+        </div>
     </div>
 </section>
 

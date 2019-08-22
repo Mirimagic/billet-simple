@@ -5,12 +5,12 @@ use \Entity\Chapters;
 
 class ChaptersManagerPDO extends ChaptersManager
 {
-  protected function add(Chapters $Chapter)
+  protected function add(Chapters $chapter)
   {
     $requete = $this->dao->prepare('INSERT INTO chapters SET chapterNumber = :chapterNumber, title = :title, content = :content, dateAdd = NOW(), dateUpdate = NOW()');
     
-    $requete->bindValue(':title', $Chapter->title());
-    $requete->bindValue(':content', $Chapter->content());
+    $requete->bindValue(':title', $chapter->title());
+    $requete->bindValue(':content', $chapter->content());
     
     $requete->execute();
   }
@@ -39,10 +39,10 @@ class ChaptersManagerPDO extends ChaptersManager
     
     $listeChapters = $requete->fetchAll();
     
-    foreach ($listeChapters as $Chapter)
+    foreach ($listeChapters as $chapter)
     {
-      $Chapter->setDateAdd(new \DateTime($Chapter->DateAdd()));
-      $Chapter->setDateUpdate(new \DateTime($Chapter->dateUpdate()));
+      $chapter->setDateAdd(new \DateTime($chapter->DateAdd()));
+      $chapter->setDateUpdate(new \DateTime($chapter->dateUpdate()));
     }
     
     $requete->closeCursor();

@@ -28,7 +28,7 @@
     <script language="javascript" type="text/javascript" src="/tinymce/tinymce.min.js"></script>
     <script language="javascript" type="text/javascript">
     tinyMCE.init({
-        theme : "advanced",
+        theme : "silver",
         mode: "exact",
         elements : "elm1",
         theme_advanced_toolbar_location : "top",

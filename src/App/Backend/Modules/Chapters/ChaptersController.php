@@ -18,7 +18,7 @@ class ChaptersController extends BackController
     $this->managers->getManagerOf('Chapters')->delete($chaptersId);
     $this->managers->getManagerOf('Comments')->deleteFromChapters($chaptersId);
 
-    $this->app->user()->setFlash('Le chapitre a bien été supprimée !');
+    $this->app->user()->setFlash('Le chapitre a bien été supprimé !');
 
     $this->app->httpResponse()->redirect('.');
   }
@@ -54,40 +54,6 @@ class ChaptersController extends BackController
     $this->processForm($request);
 
     $this->page->addVar('title', 'Modification d\'un chapitre');
-  }
-
-  public function executeUpdateComment(HTTPRequest $request)
-  {
-    $this->page->addVar('title', 'Modification d\'un commentaire');
-
-    if ($request->method() == 'POST')
-    {
-      $comment = new Comment([
-        'id' => $request->getData('id'),
-        'chapterNumber' => $request->postData('chapterNumber'),
-        'content' => $request->postData('content')
-      ]);
-    }
-    else
-    {
-      $comment = $this->managers->getManagerOf('Comments')->get($request->getData('id'));
-    }
-
-    $formBuilder = new CommentFormBuilder($comment);
-    $formBuilder->build();
-
-    $form = $formBuilder->form();
-
-    $formHandler = new FormHandler($form, $this->managers->getManagerOf('Comments'), $request);
-
-    if ($formHandler->process())
-    {
-      $this->app->user()->setFlash('Le commentaire a bien été modifié');
-
-      $this->app->httpResponse()->redirect('/admin/');
-    }
-
-    $this->page->addVar('form', $form->createView());
   }
 
   public function processForm(HTTPRequest $request)

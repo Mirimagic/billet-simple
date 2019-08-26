@@ -50,13 +50,6 @@ abstract class CommentsManager extends Manager
    * @return array
    */
   abstract public function getListOf($chapters);
-
-  /**
-   * Méthode permettant de modifier un commentaire.
-   * @param $comment Le commentaire à modifier
-   * @return void
-   */
-  abstract protected function modify(Comment $comment);
   
   /**
    * Méthode permettant d'obtenir un commentaire spécifique.

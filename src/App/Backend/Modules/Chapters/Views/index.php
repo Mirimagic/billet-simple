@@ -59,7 +59,7 @@
             </div>
             <div class="col-3">
                 <a href="">Retirer le signalement</a><br>
-                <a class="report" href="">Supprimer</a>
+                <a class="report" href="admin/supprimer-commentaire-<?=$comment['id']?>.html">Supprimer</a>
             </div>
         </div>
     </div>

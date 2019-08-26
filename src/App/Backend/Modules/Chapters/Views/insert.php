@@ -6,7 +6,9 @@
             </div>
         </div>
         <div class="row">
-            <?php require '_form.php';?>
+            <div class="col-12">
+                <?php require '_form.php';?>
+            </div>
         </div>
     </div>
 </section>

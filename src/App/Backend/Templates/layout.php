@@ -25,7 +25,7 @@
     <title><?= $title ?></title>
     <!--Ajouter les icon--> 
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
-    <script language="javascript" type="text/javascript" src="src/vendor/tinymce/tinymce/tinymce.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/tinymce/tinymce.min.js"></script>
     <script language="javascript" type="text/javascript">
     tinyMCE.init({
         theme : "advanced",

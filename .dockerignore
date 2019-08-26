@@ -4,3 +4,6 @@
 
 #Ignore folder named "charte-graphique"
 charte-graphique/
+
+#Ignore folder named "old-files"
+old-files/

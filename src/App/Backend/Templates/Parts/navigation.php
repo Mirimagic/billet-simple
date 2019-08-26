@@ -10,7 +10,7 @@
         <div class="navbar-nav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="admin/">Accueil</a>
+                    <a class="nav-link" href="">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">Chapitres</a>

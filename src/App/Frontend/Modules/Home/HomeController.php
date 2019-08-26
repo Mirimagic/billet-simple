@@ -51,40 +51,28 @@ class HomeController extends BackController
   public function executeInsertComment(HTTPRequest $request)
   {
     // Si le formulaire a été envoyé.
-    if ($request->method() == 'POST')
+    if ($request->postExists('author'))
     {
       $comment = new Comment([
         'chapters' => $request->getData('chapters'),
         'author' => $request->postData('author'),
         'content' => $request->postData('content')
       ]);
+
+      if ($comment->isValid())
+      {
+        $this->managers->getManagerOf('Comments')->save($comment);
+ 
+        $this->app->user()->setFlash('Le commentaire a bien été ajouté, merci !');
+ 
+        $this->app->httpResponse()->redirect('chapitre-'.$request->getData('chapters').'.html');
+      }
+      else
+      {
+        $this->page->addVar('erreurs', $comment->erreurs());
+      }
+ 
+      $this->page->addVar('comment', $comment);
     }
-    else
-    {
-      $comment = new Comment;
-    }
-
-    $formBuilder = new CommentFormBuilder($comment);
-    $formBuilder->build();
-
-    $form = $formBuilder->form();
-
-    $formHandler = new FormHandler($form, $this->managers->getManagerOf('Comments'), $request);
-
-    if ($formHandler->process())
-    {
-      $this->app->user()->setFlash('Le commentaire a bien été ajouté, merci !');
-      
-      $this->app->httpResponse()->redirect('chapitre-'.$request->getData('chapters').'.html');
-    }
-
-    $this->page->addVar('comment', $comment);
-    $this->page->addVar('form', $form->createView());
-    $this->page->addVar('title', 'Ajout d\'un commentaire');
-  }
-
-  public function executeAbout()
-  {
-    
   }
 }

@@ -28,7 +28,7 @@
         ?>
         <div class="row separation">
             <div class="col-9">
-                <h4>Chapitre <?=$chapters['ChaptersNumber']?> – <?=$chapters['title']?></h4>
+                <h4>Chapitre <?=$chapters['ChapterNumber']?> – <?=$chapters['title']?></h4>
                 <p>Le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?> – X Commentaires </p>
             </div>
             <div class="col-3">

@@ -4,10 +4,7 @@ namespace App\Backend\Modules\Chapters;
 use \OCFram\BackController;
 use \OCFram\HTTPRequest;
 use \Entity\Chapters;
-use \Entity\Comment;
-use \FormBuilder\CommentFormBuilder;
-use \FormBuilder\ChaptersFormBuilder;
-use \OCFram\FormHandler;
+/* use \Entity\Comment; */
 
 class ChaptersController extends BackController
 {
@@ -44,16 +41,26 @@ class ChaptersController extends BackController
 
   public function executeInsert(HTTPRequest $request)
   {
-    $this->processForm($request);
-
-    $this->page->addVar('title', 'Ajout d\'un chapitre');
+    if ($request->postExists('author'))
+    {
+      $this->processForm($request);
+    }
+    
+    $this->page->addVar('title', 'Ajout du chapitre');
   }
 
   public function executeUpdate(HTTPRequest $request)
   {
-    $this->processForm($request);
+    if($request->postExists('author'))
+    {
+      $this->processForm($request);
+    }
+    else
+    {
+      $this->page->addVar('chapters', $this->managers->getManagerOf('Chapters')->getUnique($request->getData('id')));
+    }
 
-    $this->page->addVar('title', 'Modification d\'un chapitre');
+    $this->page->addVar('title', 'Modification du chapitre');
   }
 
   public function processForm(HTTPRequest $request)
@@ -74,7 +81,7 @@ class ChaptersController extends BackController
     {
       $this->managers->getManagerOf('Chapters')->save($chapters);
  
-      $this->app->user()->setFlash($chapters->isNew() ? 'La chapters a bien été ajoutée !' : 'La chapters a bien été modifiée !');
+      $this->app->user()->setFlash($chapters->isNew() ? 'Le chapitre a bien été ajouté !' : 'Le chapitre a bien été modifié !');
     }
     else
     {

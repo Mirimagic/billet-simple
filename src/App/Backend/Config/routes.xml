@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <routes>
   <route url="/admin/" module="Chapters" action="index" />
+  <route url="/admin/home" module="Chapters" action="index" />
   <route url="/admin/nouveau-chapitre\.html" module="Chapters" action="insert" />
   <route url="/admin/modifier-chapitre-([0-9]+)\.html" module="Chapters" action="update" vars="id" />
   <route url="/admin/supprimer-chapitre-([0-9]+)\.html" module="Chapters" action="delete" vars="id" />

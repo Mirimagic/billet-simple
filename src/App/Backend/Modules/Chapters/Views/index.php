@@ -28,7 +28,7 @@
         ?>
         <div class="row separation">
             <div class="col-9">
-                <h4>Chapitre <?=$chapters['ChapterNumber']?> – <?=$chapters['title']?></h4>
+                <h4>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h4>
                 <p>Le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?> – X Commentaires </p>
             </div>
             <div class="col-3">
@@ -39,7 +39,7 @@
         <?php
         }?>
         <div id="buttonCreatChapter">
-            <a href="admin/nouveau-chapitre\.html" class="btn btn-primary" id="AddComment"role="button">Nouveau Chapitre</a>
+            <a href="nouveau-chapitre.html" class="btn btn-primary" id="AddComment"role="button">Nouveau Chapitre</a>
         </div>
     </div>
 </section>

@@ -39,7 +39,7 @@
         <?php
         }?>
         <div id="buttonCreatChapter">
-            <a href="admin/nouveau-chapitre\.html?>.html" class="btn btn-primary" id="AddComment"role="button">Nouveau Chapitre</a>
+            <a href="admin/nouveau-chapitre\.html" class="btn btn-primary" id="AddComment"role="button">Nouveau Chapitre</a>
         </div>
     </div>
 </section>

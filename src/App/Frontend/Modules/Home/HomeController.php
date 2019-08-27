@@ -75,4 +75,9 @@ class HomeController extends BackController
       $this->page->addVar('comment', $comment);
     }
   }
+
+  public function executeAbout()
+  {
+    
+  }
 }

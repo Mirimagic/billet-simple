@@ -8,11 +8,11 @@
         <form action="" method="post">
             <div class="form-group">
                 <label for="name">Pseudo</label>
-                <input type="text" class="form-control" id="name" placeholder="Pseudo" required>
+                <input type="text" class="form-control" id="name" name="author" placeholder="Pseudo" required>
             </div>
             <div class="form-group">
                 <label for="commentArea">Commentaire</label>
-                <textarea class="form-control" id="commentArea" rows="3" required><?= isset($comment) ? htmlspecialchars($comment['content']) : '' ?></textarea>
+                <textarea class="form-control" id="commentArea" rows="3" name="content" required></textarea>
             </div>
             <div class="form-group">
                 <div class="form-check">

@@ -4,8 +4,6 @@ namespace App\Frontend\Modules\Home;
 use \OCFram\BackController;
 use \OCFram\HTTPRequest;
 use \Entity\Comment;
-use \FormBuilder\CommentFormBuilder;
-use \OCFram\FormHandler;
 
 class HomeController extends BackController
 {
@@ -59,6 +57,7 @@ class HomeController extends BackController
         'content' => $request->postData('content')
       ]);
 
+
       if ($comment->isValid())
       {
         $this->managers->getManagerOf('Comments')->save($comment);
@@ -71,8 +70,7 @@ class HomeController extends BackController
       {
         $this->page->addVar('erreurs', $comment->erreurs());
       }
- 
-      $this->page->addVar('comment', $comment);
+/*       $this->page->addVar('comment', $comment); */
     }
   }
 

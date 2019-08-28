@@ -15,7 +15,7 @@ class Comment extends Entity
 
   public function isValid()
   {
-    return !(empty($this->author) || empty($this->content));
+    return (!empty($this->author) && !empty($this->content));
   }
 
   public function setChapters($chapters)
@@ -23,7 +23,7 @@ class Comment extends Entity
     $this->chapters = (int) $chapters;
   }
 
-  public function setAuteur($author)
+  public function setAuthor($author)
   {
     if (!is_string($author) || empty($author))
     {

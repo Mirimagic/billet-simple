@@ -41,17 +41,17 @@ class ChaptersController extends BackController
 
   public function executeInsert(HTTPRequest $request)
   {
-    if ($request->postExists('author'))
+    if ($request->postExists('title'))
     {
       $this->processForm($request);
     }
-    
+
     $this->page->addVar('title', 'Ajout du chapitre');
   }
 
   public function executeUpdate(HTTPRequest $request)
   {
-    if($request->postExists('author'))
+    if($request->postExists('title'))
     {
       $this->processForm($request);
     }
@@ -66,12 +66,12 @@ class ChaptersController extends BackController
   public function processForm(HTTPRequest $request)
   {
     $chapters = new Chapters([
-      'author' => $request->postData('author'),
+      'chapterNumber' => $request->postData('chapterNumber'),
       'title' => $request->postData('title'),
       'content' => $request->postData('content')
     ]);
  
-    // L'identifiant de la chapters est transmis si on veut la modifier.
+    // L'identifiant du chapitre est transmis si on veut la modifier.
     if ($request->postExists('id'))
     {
       $chapters->setId($request->postData('id'));
@@ -88,6 +88,6 @@ class ChaptersController extends BackController
       $this->page->addVar('erreurs', $chapters->erreurs());
     }
  
-    $this->page->addVar('chapters', $chapters);
+/*     $this->page->addVar('chapters', $chapters);*/  
   }
 }

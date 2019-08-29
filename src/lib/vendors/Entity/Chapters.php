@@ -16,7 +16,7 @@ class Chapters extends Entity
 
   public function isValid()
   {
-    return !(empty($this->title) || empty($this->content));
+    return (!empty($this->title) && !empty($this->content));
   }
 
 

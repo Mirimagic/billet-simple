@@ -38,6 +38,9 @@
         theme_advanced_buttons2 : "link,unlink,anchor,image,separator,"
         +"undo,redo,cleanup,code,separator,sub,sup,charmap",
         theme_advanced_buttons3 : "",
+        force_br_newlines : true,
+        force_p_newlines : false,
+        forced_root_block : '',
         height:"350px",
         width:"100%"
     });

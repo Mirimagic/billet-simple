@@ -48,7 +48,7 @@
             </div>
             <div class="col-9">
                 <h4>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h4>
-                <p><?=strip_tags($chapters['content'], '<br>')?></p>
+                <p><?=strip_tags($chapters['content'], '<br><strong><em>')?></p>
                 <a href="chapitre-<?=$chapters['id']?>.html">Lire la suite</a>
                 <p class="date">Sorti le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?>  – X Commentaire(s)</p>
             </div>

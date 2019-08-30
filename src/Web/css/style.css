@@ -240,3 +240,11 @@ footer{
 #buttonCreatChapter{
     text-align: center
 }
+
+.reported{
+    background-color: #ffefef;
+    border: 2px solid #bd4b4b;
+    margin-top: -10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}

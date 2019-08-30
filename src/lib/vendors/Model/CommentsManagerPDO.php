@@ -35,7 +35,7 @@ class CommentsManagerPDO extends CommentsManager
       throw new \InvalidArgumentException('L\'identifiant de la chapters passé doit être un nombre entier valide');
     }
     
-    $q = $this->dao->prepare('SELECT id, chapters, author, content, date FROM comments WHERE chapters = :chapters');
+    $q = $this->dao->prepare('SELECT id, chapters, author, content, date, reported FROM comments WHERE chapters = :chapters');
     $q->bindValue(':chapters', $chapters, \PDO::PARAM_INT);
     $q->execute();
     
@@ -53,7 +53,7 @@ class CommentsManagerPDO extends CommentsManager
 
   public function getListComments($start = -1, $limite = -1)
   {
-    $q = 'SELECT id, chapters, author, content, date FROM comments ORDER BY id DESC';
+    $q = 'SELECT id, chapters, author, content, date, reported FROM comments ORDER BY id DESC';
 
     if ($start != -1 || $limite != -1)
     {
@@ -77,7 +77,7 @@ class CommentsManagerPDO extends CommentsManager
   
   public function get($id)
   {
-    $q = $this->dao->prepare('SELECT id, chapters, author, content FROM comments WHERE id = :id');
+    $q = $this->dao->prepare('SELECT id, chapters, author, content, reported FROM comments WHERE id = :id');
     $q->bindValue(':id', (int) $id, \PDO::PARAM_INT);
     $q->execute();
     

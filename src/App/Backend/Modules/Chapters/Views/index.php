@@ -68,7 +68,7 @@
         foreach($listeComments as $comment)
         {
         ?>
-        <div class="row separation">
+        <div class="row separation <?=($comment['reported'] == '1' ? 'reported' : '');?>">
             <div class="col-9">
                 <h4><?=$comment['author']?></h4>
                 <p><?=nl2br(htmlspecialchars($comment['content']))?></p>
@@ -76,7 +76,12 @@
             </div>
             <div class="col-3">
                 <a href="">Voir le commentaire</a><br>
+                <?php
+                if($comment['reported'] == '1')
+                {?>
                 <a href="">Retirer le signalement</a><br>
+                <?php
+                }?>
                 <a class="report" href="admin/supprimer-commentaire-<?=$comment['id']?>.html">Supprimer</a>
             </div>
         </div>

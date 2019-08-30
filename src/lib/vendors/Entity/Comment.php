@@ -8,7 +8,8 @@ class Comment extends Entity
   protected $chapters,
             $author,
             $content,
-            $date;
+            $date,
+            $reported;
 
   const AUTEUR_INVALIDE = 1;
   const CONTENU_INVALIDE = 2;
@@ -48,6 +49,11 @@ class Comment extends Entity
     $this->date = $date;
   }
 
+  public function setReported($reported)
+  {
+    $this->reported = (int) $reported;
+  }
+
   public function chapters()
   {
     return $this->chapters;
@@ -66,5 +72,10 @@ class Comment extends Entity
   public function date()
   {
     return $this->date;
+  }
+
+  public function reported()
+  {
+    return $this->reported;
   }
 }

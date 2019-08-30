@@ -13,10 +13,10 @@
                     <a class="nav-link" href="home">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="gestion-chapitre">Chapitres</a>
+                    <a class="nav-link" href="gestion-chapitres">Chapitres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Commentaires</a>
+                    <a class="nav-link" href="gestion-commentaires">Commentaires</a>
                 </li>
             </ul>
         </div>

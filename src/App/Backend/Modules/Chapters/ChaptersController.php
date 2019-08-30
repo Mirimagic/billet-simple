@@ -45,6 +45,11 @@ class ChaptersController extends BackController
     $this->page->addVar('listeChapters', $manager->getList());
   }
 
+  public function executeCommentsList(HTTPRequest $request)
+  {
+    $this->page->addVar('title', 'Administration');
+  }
+
   public function executeInsert(HTTPRequest $request)
   {
     if ($request->postExists('title'))

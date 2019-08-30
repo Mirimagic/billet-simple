@@ -53,7 +53,7 @@ class CommentsManagerPDO extends CommentsManager
 
   public function getListComments($start = -1, $limite = -1)
   {
-    $q = $this->dao->prepare('SELECT id, chapters, author, content, date FROM comments ORDER BY id DESC');
+    $q = 'SELECT id, chapters, author, content, date FROM comments ORDER BY id DESC';
 
     if ($start != -1 || $limite != -1)
     {

@@ -12,14 +12,28 @@ class ChaptersController extends BackController
   {
     $numberChapters = $this->app->config()->get('number_chapters');
     $numberComments = $this->app->config()->get('number_comments');
+    $numberCaracters = $this->app->config()->get('number_caracters');
 
     $this->page->addVar('title', 'Administration');
 
-    $manager = $this->managers->getManagerOf('Chapters');
-    $manager = $this->managers->getManagerOf('Comments');
+    $managerChapters = $this->managers->getManagerOf('Chapters');
+    $managerComments = $this->managers->getManagerOf('Comments');
 
-    $this->page->addVar('listeChapters', $manager->getList(0, $numberChapters));
-    $this->page->addVar('listeComments', $manager->getList(0, $numberComments));
+    $listeComments = $managerComments->getListComments(0, $numberComments);
+
+    foreach ($listeComments as $comment)
+    {
+      if (strlen($comment->content()) > $numberCaracters)
+      {
+        $start = substr($comment->content(), 0, $numberCaracters);
+        $start = substr($start, 0, strrpos($start, ' ')) . '...';
+        
+        $comment->setContent($start);
+      }
+    }
+
+    $this->page->addVar('listeChapters', $managerChapters->getList(0, $numberChapters));
+    $this->page->addVar('listeComments', $listeComments);
   }
 
   public function executeChaptersList(HTTPRequest $request)

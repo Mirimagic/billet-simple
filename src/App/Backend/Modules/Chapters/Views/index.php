@@ -64,16 +64,24 @@
                 <h2 class="titleGroup">Les 5 derniers commentaires</h2>
             </div>
         </div>
+        <?php
+        foreach($listeComments as $comment)
+        {
+        ?>
         <div class="row separation">
             <div class="col-9">
-                <h4>Auteur</h4>
-                <p>Le commentaire</p>
-                <p class="date">Le XX/XX/XXXX à XXhXX</p>
+                <h4><?=$comment['author']?></h4>
+                <p><?=nl2br(htmlspecialchars($comment['content']))?></p>
+                <p class="date"><?=$comment['date']->format('d/m/Y à H:i')?></p>
             </div>
             <div class="col-3">
+                <a href="">Voir le commentaire</a><br>
                 <a href="">Retirer le signalement</a><br>
                 <a class="report" href="admin/supprimer-commentaire-<?=$comment['id']?>.html">Supprimer</a>
             </div>
         </div>
+        <?php
+        }
+        ?>    
     </div>
 </section>

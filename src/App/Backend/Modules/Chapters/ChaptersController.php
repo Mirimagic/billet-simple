@@ -34,6 +34,7 @@ class ChaptersController extends BackController
 
     $this->page->addVar('listeChapters', $managerChapters->getList(0, $numberChapters));
     $this->page->addVar('listeComments', $listeComments);
+    $this->page->addVar('numberReportedComments', $managerComments->countReported());
   }
 
   public function executeChaptersList(HTTPRequest $request)

@@ -6,8 +6,27 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-                <p class="message"> Vous avez <span class="bold">X</span> commentaires signalé à modérer.</p>
+        <div class="col-12">
+                <?php
+                if($numberReportedComments === "0")
+                {
+                ?>
+                <p class="message">Bravo ! Il n'y a aucun commentaire à modérer !</p>
+                <?php
+                }
+                elseif($numberReportedComments === "1")
+                {
+                ?>
+                <p class="message"> Vous avez <span class="bold"><?=$numberReportedComments?></span> commentaire signalé à modérer.</p>
+                <?php
+                }
+                else
+                {
+                ?>
+                <p class="message"> Vous avez <span class="bold"><?=$numberReportedComments?></span> commentaires signalés à modérer.</p>
+                <?php   
+                }
+                ?>
             </div>
         </div>
         <div class="row separation">

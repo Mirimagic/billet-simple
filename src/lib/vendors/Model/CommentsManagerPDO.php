@@ -85,4 +85,9 @@ class CommentsManagerPDO extends CommentsManager
     
     return $q->fetch();
   }
+
+  public function countReported()
+  {
+    return $this->dao->query('SELECT COUNT(*) FROM comments WHERE reported = "1"')->fetchColumn();
+  }
 }

@@ -42,7 +42,7 @@
                 <?php
                 };
                 ?>
-                <p>Le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?> – X Commentaires </p>
+                <p class="date">Posté le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?> – X Commentaires </p>
             </div>
             <div class="col-3">
                 <a href="modifier-chapitre-<?=$chapters['id']?>.html">Modifier</a><br>
@@ -72,7 +72,7 @@
             <div class="col-9">
                 <h4><?=$comment['author']?></h4>
                 <p><?=nl2br(htmlspecialchars($comment['content']))?></p>
-                <p class="date"><?=$comment['date']->format('d/m/Y à H:i')?></p>
+                <p class="date">Posté le <?=$comment['date']->format('d/m/Y à H:i')?></p>
             </div>
             <div class="col-3">
                 <a href="">Voir le commentaire</a><br>

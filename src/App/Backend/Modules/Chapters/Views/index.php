@@ -28,7 +28,20 @@
         ?>
         <div class="row separation">
             <div class="col-9">
-                <h4>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h4>
+                <?php
+                if($chapters['chapterNumber'] === '')
+                {
+                ?>
+                    <h4><?=$chapters['title']?></h4>
+                <?php
+                }
+                else
+                {
+                ?>
+                    <h4>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h4>
+                <?php
+                };
+                ?>
                 <p>Le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?> – X Commentaires </p>
             </div>
             <div class="col-3">

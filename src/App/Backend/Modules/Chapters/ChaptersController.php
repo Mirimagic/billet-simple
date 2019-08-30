@@ -31,11 +31,13 @@ class ChaptersController extends BackController
 
   public function executeIndex(HTTPRequest $request)
   {
-    $this->page->addVar('title', 'Gestion des chapitres');
+    $numberChapters = $this->app->config()->get('number_chapters');
+
+    $this->page->addVar('title', 'Administration');
 
     $manager = $this->managers->getManagerOf('Chapters');
 
-    $this->page->addVar('listeChapters', $manager->getList());
+    $this->page->addVar('listeChapters', $manager->getList(0, $numberChapters));
     $this->page->addVar('numberChapters', $manager->count());
   }
 

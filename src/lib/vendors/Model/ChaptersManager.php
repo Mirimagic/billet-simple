@@ -47,9 +47,9 @@ abstract class ChaptersManager extends Manager
 
   /**
    * Méthode retournant une liste de chapters demandée.
-   * @param $start int La première chapters à sélectionner
-   * @param $limite int Le nombre de chapters à sélectionner
-   * @return array La liste des chapters. Chaque entrée est une instance de Chapters.
+   * @param $start int Le premier chapitre à sélectionner
+   * @param $limite int Le nombre de chapitres à sélectionner
+   * @return array La liste des chapitres. Chaque entrée est une instance de Chapters.
    */
   abstract public function getList($start = -1, $limite = -1);
   

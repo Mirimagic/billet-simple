@@ -11,12 +11,15 @@ class ChaptersController extends BackController
   public function executeIndex(HTTPRequest $request)
   {
     $numberChapters = $this->app->config()->get('number_chapters');
+    $numberComments = $this->app->config()->get('number_comments');
 
     $this->page->addVar('title', 'Administration');
 
     $manager = $this->managers->getManagerOf('Chapters');
+    $manager = $this->managers->getManagerOf('Comments');
 
     $this->page->addVar('listeChapters', $manager->getList(0, $numberChapters));
+    $this->page->addVar('listeComments', $manager->getList(0, $numberComments));
   }
 
   public function executeChaptersList(HTTPRequest $request)

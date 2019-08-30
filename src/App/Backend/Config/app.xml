@@ -3,4 +3,5 @@
   <define var="login" value="admin" />
   <define var="pass" value="mdp" />
   <define var="number_chapters" value="5" />
+  <define var="number_comments" value="5" />
 </definitions>

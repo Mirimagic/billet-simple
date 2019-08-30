@@ -50,6 +50,30 @@ class CommentsManagerPDO extends CommentsManager
     
     return $comments;
   }
+
+  public function getListComments($start = -1, $limite = -1)
+  {
+    $q = $this->dao->prepare('SELECT id, chapters, author, content, date FROM comments ORDER BY id DESC');
+
+    if ($start != -1 || $limite != -1)
+    {
+      $q .= ' LIMIT '.(int) $limite.' OFFSET '.(int) $start;
+    }
+
+    $requete = $this->dao->query($q);
+    $requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\Comment');
+    
+    $listeComments = $requete->fetchAll();
+    
+    foreach ($listeComments as $comment)
+    {
+      $comment->setDate(new \DateTime($comment->date()));
+    }
+    
+    $requete->closeCursor();
+    
+    return $listeComments;
+  }
   
   public function get($id)
   {

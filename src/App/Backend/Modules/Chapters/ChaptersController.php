@@ -8,27 +8,6 @@ use \Entity\Chapters;
 
 class ChaptersController extends BackController
 {
-  public function executeDelete(HTTPRequest $request)
-  {
-    $chaptersId = $request->getData('id');
-    
-    $this->managers->getManagerOf('Chapters')->delete($chaptersId);
-    $this->managers->getManagerOf('Comments')->deleteFromChapters($chaptersId);
-
-    $this->app->user()->setFlash('Le chapitre a bien été supprimé !');
-
-    $this->app->httpResponse()->redirect('.');
-  }
-
-  public function executeDeleteComment(HTTPRequest $request)
-  {
-    $this->managers->getManagerOf('Comments')->delete($request->getData('id'));
-    
-    $this->app->user()->setFlash('Le commentaire a bien été supprimé !');
-    
-    $this->app->httpResponse()->redirect('.');
-  }
-
   public function executeIndex(HTTPRequest $request)
   {
     $numberChapters = $this->app->config()->get('number_chapters');
@@ -38,7 +17,15 @@ class ChaptersController extends BackController
     $manager = $this->managers->getManagerOf('Chapters');
 
     $this->page->addVar('listeChapters', $manager->getList(0, $numberChapters));
-    $this->page->addVar('numberChapters', $manager->count());
+  }
+
+  public function executeChaptersList(HTTPRequest $request)
+  {
+    $this->page->addVar('title', 'Administration');
+
+    $manager = $this->managers->getManagerOf('Chapters');
+
+    $this->page->addVar('listeChapters', $manager->getList());
   }
 
   public function executeInsert(HTTPRequest $request)
@@ -63,6 +50,27 @@ class ChaptersController extends BackController
     }
 
     $this->page->addVar('title', 'Modification du chapitre');
+  }
+
+  public function executeDelete(HTTPRequest $request)
+  {
+    $chaptersId = $request->getData('id');
+    
+    $this->managers->getManagerOf('Chapters')->delete($chaptersId);
+    $this->managers->getManagerOf('Comments')->deleteFromChapters($chaptersId);
+
+    $this->app->user()->setFlash('Le chapitre a bien été supprimé !');
+
+    $this->app->httpResponse()->redirect('.');
+  }
+
+  public function executeDeleteComment(HTTPRequest $request)
+  {
+    $this->managers->getManagerOf('Comments')->delete($request->getData('id'));
+    
+    $this->app->user()->setFlash('Le commentaire a bien été supprimé !');
+    
+    $this->app->httpResponse()->redirect('.');
   }
 
   public function processForm(HTTPRequest $request)
@@ -92,4 +100,5 @@ class ChaptersController extends BackController
  
 /*     $this->page->addVar('chapters', $chapters);*/  
   }
+  
 }

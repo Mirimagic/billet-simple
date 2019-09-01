@@ -32,7 +32,7 @@ class CommentsManagerPDO extends CommentsManager
   {
     if (!ctype_digit($chapters))
     {
-      throw new \InvalidArgumentException('L\'identifiant de la chapters passé doit être un nombre entier valide');
+      throw new \InvalidArgumentException('L\'identifiant du chapitre passé doit être un nombre entier valide');
     }
     
     $q = $this->dao->prepare('SELECT id, chapters, author, content, date, reported FROM comments WHERE chapters = :chapters');
@@ -70,6 +70,25 @@ class CommentsManagerPDO extends CommentsManager
       $comment->setDate(new \DateTime($comment->date()));
     }
     
+    $requete->closeCursor();
+    
+    return $listeComments;
+  }
+
+  public function getListCommentsReported()
+  {
+    $q = 'SELECT id, chapters, author, content, date, reported FROM comments WHERE reported = "1" ORDER BY id DESC';
+
+    $requete = $this->dao->query($q);
+    $requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\Comment');
+
+    $listeComments = $requete->fetchAll();
+
+    foreach ($listeComments as $comment)
+    {
+      $comment->setDate(new \DateTime($comment->date()));
+    }
+
     $requete->closeCursor();
     
     return $listeComments;

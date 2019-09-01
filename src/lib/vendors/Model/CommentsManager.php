@@ -51,13 +51,19 @@ abstract class CommentsManager extends Manager
    */
   abstract public function getListOf($chapters);
 
-    /**
+  /**
    * Méthode permettant de récupérer une liste de commentaires.
    * @param $start int Le premier commentaire à sélectionner
    * @param $limite int Le nombre de commentaires à sélectionner
    * @return array La liste des commentaires. Chaque entrée est une instance de Comments.
    */
   abstract public function getListComments($start = -1, $limite = -1);
+
+  /**
+   * Méthode permettant de récupérer une liste de commentaires signalé.
+   * @return array La liste des commentaires signalé. Chaque entrée est une instance de Comments.
+   */
+  abstract public function getListCommentsReported();
   
   /**
    * Méthode permettant d'obtenir un commentaire spécifique.

@@ -29,16 +29,24 @@
                 ?>
             </div>
         </div>
+
+        <?php
+        foreach($listeComments as $comment)
+        {
+        ?>
         <div class="row separation">
             <div class="col-9">
-                <h4>Chapitre X – Commentaire de X</h4>
-                <p>Contenu du commentaire</p>
-                <p class="date">Posté le XX/XX/XXXX</p>
+                <h4>Chapitre <?=$comment['chapters']?> – Commentaire de <?=$comment['author']?></h4>
+                <p><?=$comment['content']?></p>
+                <p class="date">Posté le <?=$comment['date']->format('d/m/Y à H:i')?></p>
             </div>
             <div class="col-3">
                 <a href="">Retirer le signalement</a><br>
                 <a class="report" href="">Supprimer</a>
             </div>
         </div>
+        <?php
+        }
+        ?>
     </div>
 </section>

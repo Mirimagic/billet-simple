@@ -12,6 +12,9 @@
                 {
                 ?>
                 <p class="message">Bravo ! Il n'y a aucun commentaire à modérer !</p>
+                <div id="gifFinished">
+                    <img src="\images\finished.gif" alt="Travail terminé">
+                </div>
                 <?php
                 }
                 elseif($numberReportedComments === "1")

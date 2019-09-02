@@ -40,7 +40,7 @@ abstract class ChaptersManager extends Manager
 
   /**
    * Méthode permettant de supprimer une chapters.
-   * @param $id int L'identifiant de la chapters à supprimer
+   * @param $id int L'identifiant du chapitre à supprimer
    * @return void
    */
   abstract public function delete($id);

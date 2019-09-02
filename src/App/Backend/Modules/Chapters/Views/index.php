@@ -101,7 +101,7 @@
                 <a href="">Retirer le signalement</a><br>
                 <?php
                 }?>
-                <a class="report" href="admin/supprimer-commentaire-<?=$comment['id']?>.html">Supprimer</a>
+                <a class="report" href="supprimer-commentaire-<?=$comment['id']?>.html">Supprimer</a>
             </div>
         </div>
         <?php

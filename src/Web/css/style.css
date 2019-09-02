@@ -255,3 +255,9 @@ footer{
     text-align: center;
     margin-bottom: 10px;
 }
+
+/*----FORM ADMIN----*/
+
+.custom-file-label{
+    margin-bottom: 10px;
+}

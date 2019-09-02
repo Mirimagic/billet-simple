@@ -11,6 +11,10 @@
         <label for="setupChapterTitle">Contenu</label>
         <textarea name="content" id="elm1" cols="80" rows="15"><?=isset($chapters) ? $chapters['content'] : ''?></textarea>
     </div>
+    <div class="custom-file">
+        <input type="file" class="custom-file-input" id="file" lang="fr">
+        <label for="file" class="custom-file-label">Ajouter une image</label>
+    </div>
     <?php
     if(isset($chapters) && !$chapters->isNew())
     {

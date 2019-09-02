@@ -118,6 +118,7 @@ class ChaptersController extends BackController
     if ($chapters->isValid())
     {
       $this->managers->getManagerOf('Chapters')->save($chapters);
+      $this->managers->getManagerOf('Chapters')->file();
  
       $this->app->user()->setFlash($chapters->isNew() ? 'Le chapitre a bien été ajouté !' : 'Le chapitre a bien été modifié !');
     }

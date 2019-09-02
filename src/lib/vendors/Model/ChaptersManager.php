@@ -66,4 +66,6 @@ abstract class ChaptersManager extends Manager
    * @return void
    */
   abstract protected function modify(Chapters $chapters);
+
+  abstract protected function file();
 }

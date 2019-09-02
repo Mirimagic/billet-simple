@@ -69,7 +69,7 @@ class ChaptersManagerPDO extends ChaptersManager
     return null;
   }
 
-  protected function modify(Chapters $chapters)
+  public function modify(Chapters $chapters)
   {
     $requete = $this->dao->prepare('UPDATE chapters SET chapterNumber = :chapterNumber, title = :title, content = :content, dateUpdate = NOW() WHERE id = :id');
     
@@ -79,5 +79,28 @@ class ChaptersManagerPDO extends ChaptersManager
     $requete->bindValue(':id', $chapters->id(), \PDO::PARAM_INT);
     
     $requete->execute();
+  }
+
+  public function file()
+  {
+  echo ('<script>alert("Je suis dans la fonction")</script>');
+    if (isset($_FILES['file']) && $_FILES['file']['error'] == 0)
+    {
+      echo ('<script>alert("Il ni a pas derreur")</script>');
+      if ($_FILES['file']['size'] <= 1000000)
+      {
+        echo ('<script>alert("Je suis pas trop lourd")</script>');
+        $infofile = pathinfo($_FILES['file']['name']);
+        $extension_upload = $infofile['extension'];
+        $extensions_authorized = array('jpg', 'jpeg', 'gif', 'png');
+
+        if (in_array($extension_upload, $extensions_authorized))
+        {
+          echo ('<script>alert("Je dois être sauvé")</script>');
+          move_uploaded_file($_FILES['file']['tmp_name'], 'images/uploads/' . basename($_FILES['file']['name']));
+          echo "L'envoi a bien été effectué !";
+        }
+      }
+    }  
   }
 }

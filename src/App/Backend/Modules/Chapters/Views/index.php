@@ -94,7 +94,7 @@
                 <p class="date">Posté le <?=$comment['date']->format('d/m/Y à H:i')?></p>
             </div>
             <div class="col-3">
-                <a href="chapitre-<?=$comment['chapterNumber']?>.html">Voir le commentaire</a><br>
+                <a href="http://localhost/chapitre-<?=$comment['chapters']?>.html">Voir le commentaire</a><br>
                 <?php
                 if($comment['reported'] == '1')
                 {?>

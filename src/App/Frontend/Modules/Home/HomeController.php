@@ -16,6 +16,7 @@ class HomeController extends BackController
     $manager = $this->managers->getManagerOf('Chapters');
     
     $listeChapters = $manager->getList(0, $numberChapters);
+    $lastChapter = $manager->getLast();
     
     foreach ($listeChapters as $chapters)
     {
@@ -30,6 +31,7 @@ class HomeController extends BackController
     
     // On ajoute la variable $listeChapters à la vue.
     $this->page->addVar('listeChapters', $listeChapters);
+    $this->page->addVar('lastChapter', $lastChapter);
   }
   
   public function executeShow(HTTPRequest $request)

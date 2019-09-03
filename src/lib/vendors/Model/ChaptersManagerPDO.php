@@ -69,6 +69,23 @@ class ChaptersManagerPDO extends ChaptersManager
     return null;
   }
 
+  public function getLast()
+  {
+    $requete = $this->dao->prepare('SELECT id, chapterNumber, title, content, dateAdd, dateUpdate FROM chapters ORDER BY id DESC LIMIT 1');
+    $requete->execute();
+
+    $requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\Chapters');
+
+    if ($lastchapters = $requete->fetch())
+    {
+      $lastchapters->setDateAdd(new \DateTime($lastchapters->DateAdd()));
+      $lastchapters->setDateUpdate(new \DateTime($lastchapters->dateUpdate()));
+
+      return $lastchapters;
+    }
+    return null;
+  }
+
   public function modify(Chapters $chapters)
   {
     $requete = $this->dao->prepare('UPDATE chapters SET chapterNumber = :chapterNumber, title = :title, content = :content, dateUpdate = NOW() WHERE id = :id');

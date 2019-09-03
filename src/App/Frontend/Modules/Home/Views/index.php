@@ -8,25 +8,40 @@
             </div>
         </div>
         <div id="displayLastChapter">
+            <?php if(!empty($lastChapter['chapterNumber']))
+            {
+            ?>
             <div class="row">
                 <div class="offset-1">
-                    <p id="last-chapters-numbre">Chapitre X</p>
+                    <p id="last-chapters-numbre">Chapitre <?=$lastChapter['chapterNumber']?></p>
+                </div>
+            </div>
+            <?php
+            }
+            ?>
+            <div class="row">
+                <div class="offset-1">
+                    <h3><?=$lastChapter['title']?></h3>
                 </div>
             </div>
             <div class="row">
                 <div class="offset-1">
-                    <h3>Titre du chapitre</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="offset-1">
-                    <button type="button" class="btn btn-primary">Lire le chapitre</button>
+                    <a href="chapitre-<?=$lastChapter['id']?>.html" class="btn btn-primary">Lire le chapitre</a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12 date">
-                <p>Sorti le DATE – X Commentaire(s)</p>
+                <p>Sorti le <?=$lastChapter['dateAdd']->format('d/m/Y à H:i')?>
+                <?php
+                if($lastChapter['dateAdd'] != $lastChapter['dateUpdate'])
+                {
+                ?>
+                 – Modifié le <?=$lastChapter['dateUpdate']->format('d/m/Y à H:i')?>
+                <?php
+                }
+                ?>
+                 – X Commentaire(s)</p>
             </div>
         </div>
     </div>
@@ -50,7 +65,16 @@
                 <h4>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h4>
                 <p><?=strip_tags($chapters['content'], '<br><strong><em>')?></p>
                 <a href="chapitre-<?=$chapters['id']?>.html">Lire la suite</a>
-                <p class="date">Sorti le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?>  – X Commentaire(s)</p>
+                <p>Sorti le <?=$Chapters['dateAdd']->format('d/m/Y à H:i')?>
+                <?php
+                if($Chapters['dateAdd'] != $Chapters['dateUpdate'])
+                {
+                ?>
+                 – Modifié le <?=$lastChapter['dateUpdate']->format('d/m/Y à H:i')?>
+                <?php
+                }
+                ?>
+                 – X Commentaire(s)</p>
             </div>
         </div>
             <?php

@@ -21,11 +21,15 @@ abstract class CommentsManager extends Manager
   abstract public function delete($id);
 
   /**
-   * Méthode permettant de supprimer tous les commentaires liés à une chapters
+   * Méthode permettant de supprimer tous les commentaires liés à un chapitre.
    * @param $chapters L'identifiant de la chapters dont les commentaires doivent être supprimés
    * @return void
    */
   abstract public function deleteFromChapters($chapters);
+
+  abstract public function reported($id);
+
+  abstract public function unreported($id);
   
   /**
    * Méthode permettant d'enregistrer un commentaire.

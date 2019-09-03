@@ -8,4 +8,5 @@
   <route url="/admin/modifier-chapitre-([0-9]+)\.html" module="Chapters" action="update" vars="id" />
   <route url="/admin/supprimer-chapitre-([0-9]+)\.html" module="Chapters" action="delete" vars="id" />
   <route url="/admin/supprimer-commentaire-([0-9]+)\.html" module="Chapters" action="deleteComment" vars="id" />
+  <route url="/admin/signaler-commentaire-([0-9]+)\.html" module="Home" action="reported" vars="id" />
 </routes>

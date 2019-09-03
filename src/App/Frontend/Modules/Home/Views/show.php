@@ -60,7 +60,7 @@
                         <p><span class="bold"><?=htmlspecialchars($comment['author'])?></span> – Posté le <?=$comment['date']->format('d/m/Y à H:i')?></p>
                     </div>
                     <div class="col-2 reportBloc">
-                        <a href="" class="report">Signaler</a>
+                        <a href="signaler-commentaire-<?=$comment['id']?>.html" class="report">Signaler</a>
                     </div>
                 </div>
                 <div class="row">

@@ -72,12 +72,22 @@ class HomeController extends BackController
       {
         $this->page->addVar('erreurs', $comment->erreurs());
       }
-/*       $this->page->addVar('comment', $comment); */
     }
   }
 
   public function executeAbout()
   {
     
+  }
+
+  public function executeReported(HTTPRequest $request)
+  {
+    $this->managers->getManagerOf('Comments')->reported($request->getData('id'));
+
+    $commentaire = $this->managers->getManagerOf('Comments')->get($request->getData('id'));
+
+    $this->app->user()->setFlash('Le commentaire à bien été signalé');
+
+    $this->app->httpResponse()->redirect('chapitre-'.$commentaire->chapters().'.html');
   }
 }

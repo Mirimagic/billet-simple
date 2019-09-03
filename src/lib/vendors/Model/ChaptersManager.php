@@ -63,11 +63,11 @@ abstract class ChaptersManager extends Manager
   abstract public function getLast();
 
   /**
-   * Méthode permettant de modifier une chapters.
+   * Méthode permettant de modifier un chapitre.
    * @param $chapters chapters la chapters à modifier
    * @return void
    */
   abstract protected function modify(Chapters $chapters);
 
-  abstract protected function file();
+  abstract public function file();
 }

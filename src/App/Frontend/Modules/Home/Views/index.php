@@ -61,7 +61,20 @@
                 <img src="/images/bears-1149459_1920.jpg" alt="" class="oldChapterPicture">
             </div>
             <div class="col-9">
-                <h4>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h4>
+                <?php
+                if($chapters['chapterNumber'] === '')
+                {
+                ?>
+                    <h4><?=$chapters['title']?></h4>
+                <?php
+                }
+                else
+                {
+                ?>
+                    <h4>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h4>
+                <?php
+                };
+                ?>
                 <p><?=strip_tags($chapters['content'], '<br><strong><em>')?></p>
                 <a href="chapitre-<?=$chapters['id']?>.html">Lire la suite</a>
                 <p>Sorti le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?>

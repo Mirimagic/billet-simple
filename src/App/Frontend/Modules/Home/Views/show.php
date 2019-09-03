@@ -9,7 +9,15 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <p class="date">Sorti le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?></p>
+            <p>Sorti le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?>
+                <?php
+                if($chapters['dateAdd'] != $chapters['dateUpdate'])
+                {
+                ?>
+                 – Modifié le <?=$chapters['dateUpdate']->format('d/m/Y à H:i')?>
+                <?php
+                }
+                ?>
             </div>
         </div>
         <div class="row">

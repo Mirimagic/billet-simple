@@ -65,12 +65,12 @@
                 <h4>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h4>
                 <p><?=strip_tags($chapters['content'], '<br><strong><em>')?></p>
                 <a href="chapitre-<?=$chapters['id']?>.html">Lire la suite</a>
-                <p>Sorti le <?=$Chapters['dateAdd']->format('d/m/Y à H:i')?>
+                <p>Sorti le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?>
                 <?php
-                if($Chapters['dateAdd'] != $Chapters['dateUpdate'])
+                if($chapters['dateAdd'] != $chapters['dateUpdate'])
                 {
                 ?>
-                 – Modifié le <?=$lastChapter['dateUpdate']->format('d/m/Y à H:i')?>
+                 – Modifié le <?=$chapters['dateUpdate']->format('d/m/Y à H:i')?>
                 <?php
                 }
                 ?>

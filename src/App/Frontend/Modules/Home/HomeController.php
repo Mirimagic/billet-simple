@@ -90,4 +90,15 @@ class HomeController extends BackController
 
     $this->app->httpResponse()->redirect('chapitre-'.$commentaire->chapters().'.html');
   }
+
+  public function executeDeleteComment(HTTPRequest $request)
+  {
+    $commentaire = $this->managers->getManagerOf('Comments')->get($request->getData('id'));
+
+    $this->managers->getManagerOf('Comments')->delete($request->getData('id'));
+    
+    $this->app->user()->setFlash('Le commentaire a bien été supprimé !');
+    
+    $this->app->httpResponse()->redirect('chapitre-'.$commentaire->chapters().'.html');
+  }
 }

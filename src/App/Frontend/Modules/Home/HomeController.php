@@ -32,6 +32,33 @@ class HomeController extends BackController
     // On ajoute la variable $listeChapters à la vue.
     $this->page->addVar('listeChapters', $listeChapters);
     $this->page->addVar('lastChapter', $lastChapter);
+    $this->page->addVar('title', 'Accueil');
+  }
+
+  public function executeShowAll(HTTPRequest $request)
+  {
+    $numberChapters = $this->app->config()->get('number_chapters_more');
+    $numberCaracters = $this->app->config()->get('number_caracters');
+    
+    // On récupère le manager des chapters.
+    $manager = $this->managers->getManagerOf('Chapters');
+    
+    $listeChapters = $manager->getList(0, $numberChapters);
+    
+    foreach ($listeChapters as $chapters)
+    {
+      if (strlen($chapters->content()) > $numberCaracters)
+      {
+        $start = substr($chapters->content(), 0, $numberCaracters);
+        $start = substr($start, 0, strrpos($start, ' ')) . '...';
+        
+        $chapters->setContent($start);
+      }
+    }
+    
+    // On ajoute la variable $listeChapters à la vue.
+    $this->page->addVar('listeChapters', $listeChapters);
+    $this->page->addVar('title', 'Tous les chapitres');
   }
   
   public function executeShow(HTTPRequest $request)

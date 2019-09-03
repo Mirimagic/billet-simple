@@ -1,5 +1,3 @@
-<?php $title = 'Accueil' ?>
-
 <section id="lastChapter">
     <div class="container">
         <div class="row">
@@ -50,7 +48,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Anciens chapitres</h2>
+                <h2>Les 5 derniers chapitres</h2>
             </div>
         </div>
 
@@ -91,7 +89,7 @@
             <?php
         } ?>
         <div class="moreChapters">
-            <button type="button" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Charger plus de chapitres</button>
+            <a href="Tous-les-chapitres" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Tous les chapitres</a>
         </div>
     </div>
 </section>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <definitions>
   <define var="number_chapters" value="5" />
+  <define var="number_chapters_more" value="10" />
   <define var="number_caracters" value="200" />
   <define var="last_chapter" value="1" />
 </definitions>

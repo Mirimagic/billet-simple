@@ -28,7 +28,15 @@
                 <?php
                 };
                 ?>
-                <p>Posté le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?> – X Commentaires </p>
+                <p>Posté le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?>
+                <?php
+                if($chapters['dateAdd'] != $chapters['dateUpdate'])
+                {
+                ?>
+                 – Modifié le <?=$chapters['dateUpdate']->format('d/m/Y à H:i')?>
+                <?php
+                }
+                ?></p>
             </div>
             <div class="col-3">
                 <a href="modifier-chapitre-<?=$chapters['id']?>.html">Modifier</a><br>

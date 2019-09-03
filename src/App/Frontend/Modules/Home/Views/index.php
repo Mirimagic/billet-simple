@@ -40,8 +40,7 @@
                  – Modifié le <?=$lastChapter['dateUpdate']->format('d/m/Y à H:i')?>
                 <?php
                 }
-                ?>
-                 – X Commentaire(s)</p>
+                ?></p>
             </div>
         </div>
     </div>
@@ -73,8 +72,7 @@
                  – Modifié le <?=$chapters['dateUpdate']->format('d/m/Y à H:i')?>
                 <?php
                 }
-                ?>
-                 – X Commentaire(s)</p>
+                ?></p>
             </div>
         </div>
             <?php

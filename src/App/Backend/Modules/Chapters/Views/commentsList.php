@@ -44,8 +44,8 @@
                 <p class="date">Posté le <?=$comment['date']->format('d/m/Y à H:i')?></p>
             </div>
             <div class="col-3">
-                <a href="">Retirer le signalement</a><br>
-                <a class="report" href="">Supprimer</a>
+                <a href="designaler-commentaire-<?=$comment['id']?>.html">Retirer le signalement</a><br>
+                <a class="report" href="supprimer-commentaire-<?=$comment['id']?>.html">Supprimer</a>
             </div>
         </div>
         <?php

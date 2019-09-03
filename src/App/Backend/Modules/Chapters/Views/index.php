@@ -98,7 +98,7 @@
                 <?php
                 if($comment['reported'] == '1')
                 {?>
-                <a href="">Retirer le signalement</a><br>
+                <a href="designaler-commentaire-<?=$comment['id']?>.html">Retirer le signalement</a><br>
                 <?php
                 }?>
                 <a class="report" href="supprimer-commentaire-<?=$comment['id']?>.html">Supprimer</a>

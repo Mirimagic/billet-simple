@@ -126,17 +126,6 @@ class ChaptersController extends BackController
     {
       $this->page->addVar('erreurs', $chapters->erreurs());
     }
- 
-/*     $this->page->addVar('chapters', $chapters);*/  
-  }
-
-  public function executeReported(HTTPRequest $request)
-  {
-    $this->managers->getManagerOf('Comments')->reported($request->getData('id'));
-
-    $this->app->user()->setFlash('Le commentaire à bien été signalé');
-
-    $this->app->httpResponse()->redirect('.');
   }
 
   public function executeUnreported(HTTPRequest $request)
@@ -145,7 +134,7 @@ class ChaptersController extends BackController
 
     $this->app->user()->setFlash('Le commentaire à bien enlevé du signalement');
 
-    $this->app->httpResponse()->redirect('.');
+    $this->app->httpResponse()->redirect('/admin/gestion-commentaires');
   }
   
 }

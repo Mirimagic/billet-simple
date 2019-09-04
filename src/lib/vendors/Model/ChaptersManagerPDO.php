@@ -45,7 +45,7 @@ class ChaptersManagerPDO extends ChaptersManager
       $chapters->setDateAdd(new \DateTime($chapters->DateAdd()));
       $chapters->setDateUpdate(new \DateTime($chapters->dateUpdate()));
     }
-    
+   
     $requete->closeCursor();
     
     return $listeChapters;
@@ -96,6 +96,19 @@ class ChaptersManagerPDO extends ChaptersManager
     $requete->bindValue(':id', $chapters->id(), \PDO::PARAM_INT);
     
     $requete->execute();
+  }
+
+  public function pagination()
+  {
+    $mysqli = $this->dao;
+    $query = 'SELECT id, chapterNumber, title, content, dateAdd, dateUpdate FROM chapters ORDER BY id DESC';
+
+    $limit = (isset($_GET['limit'])) ? $_GET['limit'] : 5;
+    $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
+    $links = 5;
+
+    $paginator = new Paginator($mysqli, $query);
+    $results = $paginator->getData($limit, $page);
   }
 
   public function file()

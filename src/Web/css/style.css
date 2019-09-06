@@ -80,6 +80,19 @@ nav{
     background-color: #f8f8f8 !important;
 }
 
+/*----PAGINATION----*/
+
+.page-item.active .page-link
+{
+    background-color: #6c98b0;
+    border-color: #6c98b0;
+}
+
+.page-link
+{
+    color: #6c98b0;
+}
+
 /*----HEADER----*/
 
 #title{

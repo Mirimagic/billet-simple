@@ -37,11 +37,6 @@ class HomeController extends BackController
 
   public function executeShowAll(HTTPRequest $request)
   {
-    // On récupère le manager des chapters.
-    $manager = $this->managers->getManagerOf('Chapters');
-
-/*     $manager->pagination(); */
-
     $this->page->addVar('title', 'Tous les chapitres');
   }
   

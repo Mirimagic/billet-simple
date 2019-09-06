@@ -56,6 +56,7 @@
                 </div>
             </div>
                 <?php
-            } ?>      
+            } ?>
+        <?= $paginator->createLinks($links);?>
     </div>
 </section>

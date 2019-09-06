@@ -2,6 +2,7 @@
 namespace Model;
 
 use \Entity\Chapters;
+use OCFram\PDOFactory;
 
 class ChaptersManagerPDO extends ChaptersManager
 {
@@ -16,6 +17,9 @@ class ChaptersManagerPDO extends ChaptersManager
     $requete->execute();
   }
 
+  /**
+   * return int
+   */
   public function count()
   {
     return $this->dao->query('SELECT COUNT(*) FROM chapters')->fetchColumn();
@@ -100,16 +104,8 @@ class ChaptersManagerPDO extends ChaptersManager
 
   public function pagination()
   {
-    $mysqli = $this->dao;
-    $query = 'SELECT id, chapterNumber, title, content, dateAdd, dateUpdate FROM chapters ORDER BY id DESC';
-
-    $limit = (isset($_GET['limit'])) ? $_GET['limit'] : 5;
-    $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
-    $links = 5;
-
-    $paginator = new Paginator($mysqli, $query);
-    $results = $paginator->getData($limit, $page);
-  }
+    
+  } 
 
   public function file()
   {

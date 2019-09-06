@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 class Paginator
@@ -17,12 +16,15 @@ class Paginator
         $this->_query = $query;
 
         $rs = $this->_conn->query($this->_query);
-        $this->_total = $rs->num_rows;
+        $this->_total = $rs->rowCount();
     }
 
     public function getData($limit = 10, $page = 1)
     {
-        if($this->limit == 'all')
+        $this->_limit = $limit;
+        $this->_page = $page;
+        
+        if($this->_limit == 'all')
         {
             $query = $this->_query;
         }
@@ -32,14 +34,14 @@ class Paginator
             $query = $this->_query . " LIMIT {$this->_row_start}, $this->_limit";
         }
 
-        $rs = $this->_conn->query($query) or die($this->_conn->error);
+        $rs = $this->_conn->query($query);
 
-        while ($row = $rs->fetch_assoc())
+        while ($row = $rs->fetch())
         {
             $results[] = $row;
         }
 
-        $result = new stdClass();
+        $result = new StdClass();
         $result->page = $this->_page;
         $result->limit = $this->_limit;
         $result->total = $this->_total;
@@ -48,7 +50,7 @@ class Paginator
         return $result;
     }
 
-    public function createLinks($links, $list_class)
+    public function createLinks($links)
     {
         if($this->_limit == 'all')
         {
@@ -69,35 +71,35 @@ class Paginator
         echo '$page: '.$this->_page.' | ';
         echo '$links: '.$links.' <br /> ';
 
-        $html = '<ul class="' . $list_class . '">';
+        $html = '<ul class="pagination">';
 
         $class = ($this->_page == 1) ? "disabled" : "";
 
-        $previous_page = ($this->_page == 1) ? '<a href=""><li class"' . $class . '">&laquo;</a></li>' : '<li class="' . $class . '"><a href="?limit=' . $this->limit . '&page=' . ($this->_page - 1) . '">&laquo;</a></li>';
+        $previous_page = ($this->_page == 1) ? '<li class"' . $class . ' page-item"><a href="" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>' : '<li class"' . $class . ' page-item"><a href="?limit=' . $this->limit . '&page=' . ($this->_page - 1) . '" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>';
 
         $html .= $previous_page;
 
         if ($start > 1)
         {
-            $html .= '<li><a href="?limit=' . $this->_limit . '&page=1">1</a></li>';
-            $html .= '<li class="disabled"><span>...</span></li>';
+            $html .= '<li class="page-item"><a href="?limit=' . $this->_limit . '&page=1" class="page-link">1</a></li>';
+            $html .= '<li class="disabled page-item"><span>...</span></li>';
         }
 
         for ($i = $start ; $i <= $end; $i++)
         {
             $class = ($this->_page == $i) ? "active" : "";
-            $html.= '<li class="' . $class . '"><a href="?limit=' . $this->_limit . '$page=' . $i . '">' . $i . '</a></li>';
+            $html.= '<li class"' . $class . ' page-item"><a href="?limit=' . $this->_limit . '$page=' . $i . '" class="page-link">' . $i . '</a></li>';
         }
 
         if ($end < $last)
         {
-            $html .= '<li class="disabled"><span>...</span></li>';
-            $html .= '<li><a href="?limit=' . $this->_limit . '&page=' . $last . '">' . $last . '</a></li>';
+            $html .= '<li class="disabled page-item"><span>...</span></li>';
+            $html .= '<li class"' . $class . ' page-item"><a href="?limit=' . $this->_limit . '&page=' . $last . '" class="page-link">' . $last . '</a></li>';
         }
 
         $class = ($this->_page == $last) ? "disabled" : "";
 
-        $next_page = ($this->_page == $last) ? '<li class="' . $class . '"><a href="">&raquo;</a></li>' : '<li class="' . $class . '"><a href="?limit' . $this->_limit . '&page=' . ($this->_page + 1) . '">&raquo;</a></li>';
+        $next_page = ($this->_page == $last) ? '<li class"' . $class . ' page-item"><a href="" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>' : '<li class"' . $class . ' page-item"><a href="?limit=' . $this->limit . '&page=' . ($this->_page - 1) . '" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>';
 
         $html .= $next_page;
         $html .= '</ul>';

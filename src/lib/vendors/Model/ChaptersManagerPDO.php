@@ -3,6 +3,7 @@ namespace Model;
 
 use \Entity\Chapters;
 use OCFram\PDOFactory;
+use OCFram\Paginator;
 
 class ChaptersManagerPDO extends ChaptersManager
 {
@@ -102,11 +103,19 @@ class ChaptersManagerPDO extends ChaptersManager
     $requete->execute();
   }
 
-  public function pagination()
+/*   public function pagination()
   {
-    
-  } 
+    $mysqli = PDOFactory::getMysqlConnexion();
+    $query = 'SELECT id, chapterNumber, title, content, dateAdd, dateUpdate FROM chapters ORDER BY id DESC';
 
+    $limit = (isset($_GET['limit'])) ? $_GET['limit'] : 5;
+    $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
+    $links = 5;
+
+    $paginator = new Paginator($mysqli, $query);
+    $results = $paginator->getData($limit, $page);
+  } 
+ */
   public function file()
   {
   echo ('<script>alert("Je suis dans la fonction")</script>');

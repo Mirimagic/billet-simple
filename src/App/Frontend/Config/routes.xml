@@ -2,7 +2,7 @@
 <routes>
   <route url="/" module="Home" action="index" />
   <route url="/Accueil" module="Home" action="index" />
-  <route url="/Tous-les-chapitres" module="Home" action="showAll" />
+  <route url="/Tous-les-chapitres([0-9][A-Z][a-z]+)\.html" module="Home" action="showAll" />
   <route url="/chapitre-([0-9]+)\.html" module="Home" action="show" vars="id"/>
   <route url="/commenter-([0-9]+)\.html" module="Home" action="insertComment" vars="chapters" />
   <route url="/APropos" module="Home" action="about" />

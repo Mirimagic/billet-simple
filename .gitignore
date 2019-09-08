@@ -9,3 +9,9 @@ Projet4.code-workspace
 
 #Ignore folder named "old-files"
 old-files/
+
+#Ignore folder named ".idea"
+.idea/
+
+#Ignore files with extention ".iml"
+*.iml

@@ -7,9 +7,6 @@ Projet4.code-workspace
 #Ignore folder named "vendor"
 /src/vendor/
 
-#Ignore folder named "old-files"
-old-files/
-
 #Ignore folder named ".idea"
 .idea/
 

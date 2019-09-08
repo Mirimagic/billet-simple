@@ -23,7 +23,7 @@ class Paginator
     {
         $this->_limit = $limit;
         $this->_page = $page;
-        
+
         if($this->_limit == 'all')
         {
             $query = $this->_query;
@@ -58,7 +58,7 @@ class Paginator
         }
 
         $last = ceil($this->_total / $this->_limit);
-        $start = (($this->page - $links) > 0) ? $this->_page - $links : 1;
+        $start = (($this->_page - $links) > 0) ? $this->_page - $links : 1;
         $end = (($this->_page + $links) < $last) ? $this->_page + $links : $last;
 
         //debugging
@@ -75,31 +75,31 @@ class Paginator
 
         $class = ($this->_page == 1) ? "disabled" : "";
 
-        $previous_page = ($this->_page == 1) ? '<li class="page-item ' . $class . '"><a href="" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>' : '<li class="page-item ' . $class . '"><a href="?limit=' . $this->limit . '&page=' . ($this->_page - 1) . '" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>';
+        $previous_page = ($this->_page == 1) ? '<li class="page-item ' . $class . '"><a href="" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>' : '<li class="page-item ' . $class . '"><a href="?limit=' . $this->_limit . '&amp;page=' . ($this->_page - 1) . '" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>';
 
         $html .= $previous_page;
 
         if ($start > 1)
         {
-            $html .= '<li class="page-item"><a href="?limit=' . $this->_limit . '&page=1" class="page-link">1</a></li>';
+            $html .= '<li class="page-item"><a href="?limit=' . $this->_limit . '&amp;page=1" class="page-link">1</a></li>';
             $html .= '<li class="page-item disabled"><span>...</span></li>';
         }
 
         for ($i = $start ; $i <= $end; $i++)
         {
             $class = ($this->_page == $i) ? "active" : "";
-            $html.= '<li class="page-item ' . $class . '"><a href="?limit=' . $this->_limit . '$page=' . $i . '" class="page-link">' . $i . '</a></li>';
+            $html.= '<li class="page-item ' . $class . '"><a href="?limit=' . $this->_limit . '&amp;page=' . $i . '" class="page-link">' . $i . '</a></li>';
         }
 
         if ($end < $last)
         {
             $html .= '<li class="page-item disabled"><span>...</span></li>';
-            $html .= '<li class="page-item ' . $class . '"><a href="?limit=' . $this->_limit . '&page=' . $last . '" class="page-link">' . $last . '</a></li>';
+            $html .= '<li class="page-item ' . $class . '"><a href="?limit=' . $this->_limit . '&amp;page=' . $last . '" class="page-link">' . $last . '</a></li>';
         }
 
         $class = ($this->_page == $last) ? "disabled" : "";
 
-        $next_page = ($this->_page == $last) ? '<li class="page-item ' . $class . '"><a href="" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>' : '<li class="page-item ' . $class . '"><a href="?limit=' . $this->limit . '&page=' . ($this->_page - 1) . '" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>';
+        $next_page = ($this->_page == $last) ? '<li class="page-item ' . $class . '"><a href="" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>' : '<li class="page-item ' . $class . '"><a href="?limit=' . $this->_limit . '&amp;page=' . ($this->_page - 1) . '" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>';
 
         $html .= $next_page;
         $html .= '</ul>';

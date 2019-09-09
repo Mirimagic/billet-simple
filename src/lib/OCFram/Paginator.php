@@ -62,14 +62,14 @@ class Paginator
         $end = (($this->_page + $links) < $last) ? $this->_page + $links : $last;
 
         //debugging
-        echo '$total: '.$this->_total.' | ';
+/*        echo '$total: '.$this->_total.' | ';
         echo '$row_start: '.$this->_row_start.' | ';
         echo '$limit: '.$this->_limit.' | ';
         echo '$start: '.$start.' | ';
         echo '$end: '.$end.' | ';
         echo '$last: '.$last.' | ';
         echo '$page: '.$this->_page.' | ';
-        echo '$links: '.$links.' <br /> ';
+        echo '$links: '.$links.' <br /> ';*/
 
         $html = '<ul class="pagination">';
 

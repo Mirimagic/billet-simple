@@ -12,7 +12,7 @@ abstract class ChaptersManager extends Manager
    * @return void
    */
   abstract protected function add(Chapters $chapters);
-  
+
   /**
    * Méthode permettant d'enregistrer une chapters.
    * @param $chapters Chapters la chapters à enregistrer
@@ -52,7 +52,7 @@ abstract class ChaptersManager extends Manager
    * @return array La liste des chapitres. Chaque entrée est une instance de Chapters.
    */
   abstract public function getList($start = -1, $limite = -1);
-  
+
   /**
    * Méthode retournant une chapters précise.
    * @param $id int L'identifiant de la chapters à récupérer
@@ -68,6 +68,4 @@ abstract class ChaptersManager extends Manager
    * @return void
    */
   abstract protected function modify(Chapters $chapters);
-
-  abstract public function file();
 }

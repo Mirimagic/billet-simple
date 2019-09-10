@@ -27,7 +27,7 @@ class ChaptersController extends BackController
       {
         $start = substr($comment->content(), 0, $numberCaracters);
         $start = substr($start, 0, strrpos($start, ' ')) . '...';
-        
+
         $comment->setContent($start);
       }
     }
@@ -83,7 +83,7 @@ class ChaptersController extends BackController
   public function executeDelete(HTTPRequest $request)
   {
     $chaptersId = $request->getData('id');
-    
+
     $this->managers->getManagerOf('Chapters')->delete($chaptersId);
     $this->managers->getManagerOf('Comments')->deleteFromChapters($chaptersId);
 
@@ -95,31 +95,33 @@ class ChaptersController extends BackController
   public function executeDeleteComment(HTTPRequest $request)
   {
     $this->managers->getManagerOf('Comments')->delete($request->getData('id'));
-    
+
     $this->app->user()->setFlash('Le commentaire a bien été supprimé !');
-    
+
     $this->app->httpResponse()->redirect('.');
   }
 
   public function processForm(HTTPRequest $request)
   {
+//    var_dump($_FILES);
+//    die;
     $chapters = new Chapters([
       'chapterNumber' => $request->postData('chapterNumber'),
       'title' => $request->postData('title'),
-      'content' => $request->postData('content')
+      'content' => $request->postData('content'),
+      'image' => $request->postData('image')
     ]);
- 
+
     // L'identifiant du chapitre est transmis si on veut la modifier.
     if ($request->postExists('id'))
     {
       $chapters->setId($request->postData('id'));
     }
- 
+
     if ($chapters->isValid())
     {
       $this->managers->getManagerOf('Chapters')->save($chapters);
-      $this->managers->getManagerOf('Chapters')->file();
- 
+
       $this->app->user()->setFlash($chapters->isNew() ? 'Le chapitre a bien été ajouté !' : 'Le chapitre a bien été modifié !');
     }
     else
@@ -136,5 +138,5 @@ class ChaptersController extends BackController
 
     $this->app->httpResponse()->redirect('/admin/gestion-commentaires');
   }
-  
+
 }

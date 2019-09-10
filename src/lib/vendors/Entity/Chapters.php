@@ -9,7 +9,8 @@ class Chapters extends Entity
             $title,
             $content,
             $dateAdd,
-            $dateUpadate;
+            $dateUpdate,
+            $image;
 
   const TITLE_INVALIDE = 1;
   const CONTENT_INVALIDE = 2;
@@ -57,6 +58,11 @@ class Chapters extends Entity
     $this->dateUpdate = $dateUpdate;
   }
 
+  public function setImage($image)
+  {
+    $this->image = $image;
+  }
+
   // GETTERS //
 
   public function chapterNumber()
@@ -82,5 +88,10 @@ class Chapters extends Entity
   public function dateUpdate()
   {
     return $this->dateUpdate;
+  }
+
+  public function image()
+  {
+    return $this->image;
   }
 }

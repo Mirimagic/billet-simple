@@ -99,16 +99,17 @@ class ChaptersManagerPDO extends ChaptersManager
 
   public function modify(Chapters $chapters)
   {
-    $uploade_image =$_FILES['image']['name'];
-    $folder ="/images/uploads/";
+    $upload_image = $_FILES['image']['name'];
+    $folder = getcwd() . "/images/uploads/";
 
-    move_uploaded_file($_FILES['image']['tmp_name'], '$folder'.$_FILES['image']['name']);
+    move_uploaded_file($_FILES['image']['tmp_name'], $folder.$_FILES['image']['name']);
 
-    $requete = $this->dao->prepare('UPDATE chapters SET chapterNumber = :chapterNumber, title = :title, content = :content, dateUpdate = NOW(), image = $uploade_image WHERE id = :id');
+    $requete = $this->dao->prepare('UPDATE chapters SET chapterNumber = :chapterNumber, title = :title, content = :content, dateUpdate = NOW(), image = :image WHERE id = :id');
 
     $requete->bindValue(':title', $chapters->title());
     $requete->bindValue(':chapterNumber', $chapters->chapterNumber());
     $requete->bindValue(':content', $chapters->content());
+    $requete->bindValue(':image', $upload_image);
     $requete->bindValue(':id', $chapters->id(), \PDO::PARAM_INT);
 
     $requete->execute();

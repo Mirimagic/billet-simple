@@ -1,17 +1,3 @@
-<?php
-    use OCFram\PDOFactory;
-    use OCFram\Paginator;
-    $mysqli = PDOFactory::getMysqlConnexion();
-    $query = 'SELECT id, chapterNumber, title, content, dateAdd, dateUpdate FROM chapters ORDER BY id DESC';
-
-    $limit = (isset($_GET['limit'])) ? $_GET['limit'] : 5;
-    $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
-    $links = 5;
-
-    $paginator = new Paginator($mysqli, $query);
-    $results = $paginator->getData($limit, $page);
-?>
-
 <section>
     <div class="container">
         <div class="row">
@@ -25,31 +11,44 @@
             ?>
             <div class="row oldChapter">
                 <div class="col-3">
+                  <?php
+                  if ($chapters['image'] != "")
+                  {
+                    ?>
+                    <img src="/images/uploads/<?=$chapters['image']?>" alt="" class="oldChapterPicture">
+                    <?php
+                  }
+                  else
+                  {
+                    ?>
                     <img src="/images/bears-1149459_1920.jpg" alt="" class="oldChapterPicture">
+                    <?php
+                  }
+                  ?>
                 </div>
                 <div class="col-9">
-                    <?php
-                    if($chapters['chapterNumber'] === '')
-                    {
-                    ?>
-                        <h4><?=$chapters['title']?></h4>
-                    <?php
-                    }
-                    else
-                    {
-                    ?>
-                        <h4>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h4>
-                    <?php
-                    };
-                    ?>
+                    <h4><?=$chapters['chapterNumber'] != '' ? 'Chapitre ' . $chapters['chapterNumber'] . ' –' : ''?><?=$chapters['title']?></h4>
+                  <?php
+                  if (strlen($chapters['content']) > 200)
+                  {
+                    $start = substr($chapters['content'], 0, 200);
+                    $start = substr($start, 0, strrpos($start, ' ')) . '...'; ?>
+
+                    <p><?=strip_tags($start, '<br><strong><em>')?></p>
+                  <?php
+                  } else
+                  { ?>
                     <p><?=strip_tags($chapters['content'], '<br><strong><em>')?></p>
+                  <?php
+                  }
+                  ?>
                     <a href="chapitre-<?=$chapters['id']?>.html">Lire la suite</a>
-                    <p>Sorti le <?=$chapters['dateAdd']/* ->format('d/m/Y à H:i') */?>
+                    <p>Sorti le <?=$chapters['dateAddFr']?>
                     <?php
-                    if($chapters['dateAdd'] != $chapters['dateUpdate'])
+                    if($chapters['dateAddFr'] != $chapters['dateUpdateFr'])
                     {
                     ?>
-                    – Modifié le <?=$chapters['dateUpdate']/* ->format('d/m/Y à H:i') */?>
+                    – Modifié le <?=$chapters['dateUpdateFr']?>
                     <?php
                     }
                     ?></p>

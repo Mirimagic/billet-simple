@@ -17,8 +17,16 @@ class ConnexionController extends BackController
 
       if ($login == $this->app->config()->get('login') && $password == $this->app->config()->get('pass'))
       {
-        $this->app->user()->setAuthenticated(true);
-        $this->app->httpResponse()->redirect('.');
+        if(isset($_POST['stayConnected']))
+        {
+          setcookie('connected', 'true', time() + 365*24*3600, '/', null, false, true);
+          $this->app->user()->setAuthenticated(true);
+          $this->app->httpResponse()->redirect('.');
+        } else
+        {
+          $this->app->user()->setAuthenticated(true);
+          $this->app->httpResponse()->redirect('.');
+        }
       }
       else
       {

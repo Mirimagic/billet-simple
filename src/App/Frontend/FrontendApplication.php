@@ -14,6 +14,10 @@ class FrontendApplication extends Application
 
   public function run()
   {
+    if(isset($_COOKIE['connected'])){
+      $this->user()->setAuthenticated(true);
+    }
+
     $controller = $this->getController();
     $controller->execute();
 

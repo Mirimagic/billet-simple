@@ -14,6 +14,10 @@ class BackendApplication extends Application
 
   public function run()
   {
+    if(isset($_COOKIE['connected'])){
+      $this->user()->setAuthenticated(true);
+    }
+
     if ($this->user->isAuthenticated())
     {
       $controller = $this->getController();

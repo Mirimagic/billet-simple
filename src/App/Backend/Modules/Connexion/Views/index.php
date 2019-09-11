@@ -18,7 +18,7 @@
                     </div>
                     <div class="form-group">
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="stayConnected">
+                            <input type="checkbox" class="form-check-input" id="stayConnected" name="stayConnected">
                             <label for="stayConnected" class="form-check-label">Rester connecté</label>
                         </div>
                     </div>

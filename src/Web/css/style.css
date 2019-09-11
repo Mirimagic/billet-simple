@@ -10,7 +10,7 @@ $color-blue: #6c98b0; */
     margin-right: auto;
     margin-left: auto;
 }
-  
+
 .row {
     margin-right: -15px;
     margin-left: -15px;
@@ -71,7 +71,7 @@ a{
 /*----NAVIGATION----*/
 
 #logo{
-    height: 50px; 
+    height: 50px;
 }
 
 nav{
@@ -137,7 +137,6 @@ footer{
 /*----LAST CHAPTER----*/
 
 #displayLastChapter{
-    background-color: lightgray;
     background-position: center;
     background-size: cover;
     padding-top: 75px;

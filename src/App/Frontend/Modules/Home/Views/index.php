@@ -5,7 +5,7 @@
                 <h2>Dernier chapitre</h2>
             </div>
         </div>
-        <div id="displayLastChapter">
+        <div id="displayLastChapter" style="background-image: url(<?=$lastChapter['image'] != '' ? '/images/uploads/' . $lastChapter['image'] : '/images/bears-1149459_1920.jpg'?>);">
             <?php if(!empty($lastChapter['chapterNumber']))
             {
             ?>

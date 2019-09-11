@@ -56,7 +56,20 @@
         foreach ($listeChapters as $chapters) { ?>
         <div class="row oldChapter">
             <div class="col-3">
+                <?php
+                if ($chapters['image'] != "")
+                {
+                ?>
+                  <img src="/images/uploads/<?=$chapters['image']?>" alt="" class="oldChapterPicture">
+                <?php
+                }
+                else
+                {
+                ?>
                 <img src="/images/bears-1149459_1920.jpg" alt="" class="oldChapterPicture">
+                <?php
+                }
+                ?>
             </div>
             <div class="col-9">
                 <?php

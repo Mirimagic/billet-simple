@@ -39,7 +39,7 @@ class ChaptersManagerPDO extends ChaptersManager
 
   public function getList($start = -1, $limite = -1)
   {
-    $sql = 'SELECT id, chapterNumber, title, content, dateAdd, dateUpdate FROM chapters ORDER BY id DESC';
+    $sql = 'SELECT id, chapterNumber, title, content, dateAdd, dateUpdate, image FROM chapters ORDER BY id DESC';
 
     if ($start != -1 || $limite != -1)
     {
@@ -64,7 +64,7 @@ class ChaptersManagerPDO extends ChaptersManager
 
   public function getUnique($id)
   {
-    $requete = $this->dao->prepare('SELECT id, chapterNumber, title, content, dateAdd, dateUpdate FROM chapters WHERE id = :id');
+    $requete = $this->dao->prepare('SELECT id, chapterNumber, title, content, dateAdd, dateUpdate, image FROM chapters WHERE id = :id');
     $requete->bindValue(':id', (int) $id, \PDO::PARAM_INT);
     $requete->execute();
 
@@ -82,7 +82,7 @@ class ChaptersManagerPDO extends ChaptersManager
 
   public function getLast()
   {
-    $requete = $this->dao->prepare('SELECT id, chapterNumber, title, content, dateAdd, dateUpdate FROM chapters ORDER BY id DESC LIMIT 1');
+    $requete = $this->dao->prepare('SELECT id, chapterNumber, title, content, dateAdd, dateUpdate, image FROM chapters ORDER BY id DESC LIMIT 1');
     $requete->execute();
 
     $requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\Chapters');

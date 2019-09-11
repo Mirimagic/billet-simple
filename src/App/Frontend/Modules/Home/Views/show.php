@@ -4,9 +4,21 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h2>
+                <h2><?=$chapters['chapterNumber'] != '' ? 'Chapitre ' . $chapters['chapterNumber'] . ' –' : ''?><?=$chapters['title']?></h2>
             </div>
         </div>
+        <?php
+        if ($chapters['image'] != "")
+        {
+        ?>
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <img src="/images/uploads/<?=$chapters['image']?>" alt="" class="chapterPicture">
+          </div>
+        </div>
+          <?php
+        }
+          ?>
         <div class="row">
             <div class="col-12">
             <p>Sorti le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?>

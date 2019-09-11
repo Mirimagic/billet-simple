@@ -11,7 +11,7 @@
             ?>
             <div class="row">
                 <div class="offset-1">
-                    <p id="last-chapters-numbre">Chapitre <?=$lastChapter['chapterNumber']?></p>
+                    <p id="lastChapterNumber">Chapitre <?=$lastChapter['chapterNumber']?></p>
                 </div>
             </div>
             <?php
@@ -72,20 +72,7 @@
                 ?>
             </div>
             <div class="col-9">
-                <?php
-                if($chapters['chapterNumber'] === '')
-                {
-                ?>
-                    <h4><?=$chapters['title']?></h4>
-                <?php
-                }
-                else
-                {
-                ?>
-                    <h4>Chapitre <?=$chapters['chapterNumber']?> – <?=$chapters['title']?></h4>
-                <?php
-                };
-                ?>
+                <h4><?=$chapters['chapterNumber'] != '' ? 'Chapitre ' . $chapters['chapterNumber'] . ' –' : ''?><?=$chapters['title']?></h4>
                 <p><?=strip_tags($chapters['content'], '<br><strong><em>')?></p>
                 <a href="chapitre-<?=$chapters['id']?>.html">Lire la suite</a>
                 <p>Sorti le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?>

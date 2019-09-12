@@ -18,12 +18,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content=""> <!-- A compléter -->
+    <meta name="description" content="Découvrez chaque semaines un nouveau chapitre du futur roman &laquo;Billet simple pour l'Alaska&raquo; de Jean Forteroche. Une aventure pleine de rebondissement sur la terre du soleil de minuit."> <!-- A compléter -->
     <link href="https://fonts.googleapis.com/css?family=Advent+Pro:400,500|Raleway:400,400i,700,700i&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/31d8dde4e9.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= $title ?></title>
-    <!--Ajouter les icon-->
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon/favicon.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="/images/favicon/favicon-32.png" type="image/png">
+    <link rel="icon" sizes="64x64" href="/images/favicon/favicon-64.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="/images/favicon/favicon-96.png" type="image/png">
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
     <script language="javascript" type="text/javascript" src="/tinymce/tinymce.min.js"></script>
     <script language="javascript" type="text/javascript">

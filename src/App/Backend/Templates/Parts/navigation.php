@@ -7,29 +7,27 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="home">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gestion-chapitres">Chapitres</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gestion-commentaires">Commentaires</a>
-                </li>
-            </ul>
-          <?php
-          if (isset($_COOKIE['connected'])){
-            ?>
-          <ul class="nav navbar-nav ml-auto">
+        <ul class="nav navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="deconnecter">Se déconnecter</a>
+                <a class="nav-link" href="home">Accueil</a>
             </li>
-          </ul>
-          <?php
-          }
-          ?>
-        </div>
+            <li class="nav-item">
+                <a class="nav-link" href="gestion-chapitres">Chapitres</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gestion-commentaires">Commentaires</a>
+            </li>
+        </ul>
+      <?php
+      if (isset($_COOKIE['connected'])){
+        ?>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a class="nav-link" href="deconnecter">Se déconnecter</a>
+        </li>
+      </ul>
+      <?php
+      }
+      ?>
     </div>
 </nav>

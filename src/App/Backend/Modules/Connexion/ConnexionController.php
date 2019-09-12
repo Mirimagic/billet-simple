@@ -34,4 +34,13 @@ class ConnexionController extends BackController
       }
     }
   }
+
+  public function executeDisconnect()
+  {
+    setcookie('connected', 'true', 1, '/', null, false, true);
+
+    $this->app->user()->setFlash('Vous êtes déconnecté');
+
+    $this->app->httpResponse()->redirect('.');
+  }
 }

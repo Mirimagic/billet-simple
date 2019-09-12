@@ -9,4 +9,5 @@
   <route url="/admin/supprimer-chapitre-([0-9]+)\.html" module="Chapters" action="delete" vars="id" />
   <route url="/admin/supprimer-commentaire-([0-9]+)\.html" module="Chapters" action="deleteComment" vars="id" />
   <route url="/admin/designaler-commentaire-([0-9]+)\.html" module="Chapters" action="unreported" vars="id" />
+  <route url="/admin/deconnecter" module="Connexion" action="disconnect" />
 </routes>

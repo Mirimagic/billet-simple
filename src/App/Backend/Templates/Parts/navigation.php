@@ -19,6 +19,17 @@
                     <a class="nav-link" href="gestion-commentaires">Commentaires</a>
                 </li>
             </ul>
+          <?php
+          if (isset($_COOKIE['connected'])){
+            ?>
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="deconnecter">Se déconnecter</a>
+            </li>
+          </ul>
+          <?php
+          }
+          ?>
         </div>
     </div>
 </nav>

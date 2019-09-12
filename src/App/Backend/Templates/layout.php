@@ -1,6 +1,6 @@
 <?php
  $allowedTags='<p><strong><em><u><h1><h2><h3><h4><h5><h6><img>';
- $allowedTags.='<li><ol><ul><span><div><br><ins><del>';  
+ $allowedTags.='<li><ol><ul><span><div><br><ins><del>';
 // Should use some proper HTML filtering here.
   if($_POST['elm1']!='') {
     $sHeader = '<h1>Ah, content is king.</h1>';
@@ -23,7 +23,7 @@
     <script src="https://kit.fontawesome.com/31d8dde4e9.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= $title ?></title>
-    <!--Ajouter les icon--> 
+    <!--Ajouter les icon-->
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
     <script language="javascript" type="text/javascript" src="/tinymce/tinymce.min.js"></script>
     <script language="javascript" type="text/javascript">
@@ -49,11 +49,12 @@
 </head>
 
 <body>
-    <?php 
+    <?php
     if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) {
          require 'Parts/navigation.php';
     }
     ?>
+    <?php if ($user->hasFlash()) echo '<script>alert("'.$user->getFlash().'");</script>'; ?>
     <?= $content ?>
 </body>
 

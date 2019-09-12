@@ -18,16 +18,16 @@
                 <a class="nav-link" href="gestion-commentaires">Commentaires</a>
             </li>
         </ul>
-      <?php
-      if (isset($_COOKIE['connected'])){
+        <?php
+        if (isset($_COOKIE['connected'])){
+          ?>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="deconnecter">Se déconnecter</a>
+          </li>
+        </ul>
+        <?php
+        }
         ?>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item">
-          <a class="nav-link" href="deconnecter">Se déconnecter</a>
-        </li>
-      </ul>
-      <?php
-      }
-      ?>
     </div>
 </nav>

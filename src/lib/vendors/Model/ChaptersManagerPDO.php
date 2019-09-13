@@ -24,9 +24,6 @@ class ChaptersManagerPDO extends ChaptersManager
     $requete->execute();
   }
 
-  /**
-   * return int
-   */
   public function count()
   {
     return $this->dao->query('SELECT COUNT(*) FROM chapters')->fetchColumn();

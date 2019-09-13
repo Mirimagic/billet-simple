@@ -1,5 +1,3 @@
-<?php $title = 'Administration' ?>
-
 <section id="information">
     <div class="container groupAdmin">
         <div class="row">
@@ -26,7 +24,7 @@
                 {
                 ?>
                 <p class="message"> Vous avez <span class="bold"><?=$numberReportedComments?></span> commentaires signalés à modérer.</p>
-                <?php   
+                <?php
                 }
                 ?>
             </div>
@@ -114,6 +112,6 @@
         </div>
         <?php
         }
-        ?>    
+        ?>
     </div>
 </section>

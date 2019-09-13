@@ -1,5 +1,3 @@
-<?php $title = 'Chapitre' ?>
-
 <section id="Chapter">
     <div class="container">
         <div class="row">

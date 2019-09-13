@@ -1,5 +1,3 @@
-<?php $title = 'À propos' ?>
-
 <section id='About'>
     <div class="container">
         <div class="row">

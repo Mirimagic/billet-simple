@@ -4,7 +4,6 @@ namespace App\Backend\Modules\Chapters;
 use \OCFram\BackController;
 use \OCFram\HTTPRequest;
 use \Entity\Chapters;
-/* use \Entity\Comment; */
 
 class ChaptersController extends BackController
 {
@@ -13,8 +12,6 @@ class ChaptersController extends BackController
     $numberChapters = $this->app->config()->get('number_chapters');
     $numberComments = $this->app->config()->get('number_comments');
     $numberCaracters = $this->app->config()->get('number_caracters');
-
-    $this->page->addVar('title', 'Administration');
 
     $managerChapters = $this->managers->getManagerOf('Chapters');
     $managerComments = $this->managers->getManagerOf('Comments');
@@ -32,6 +29,7 @@ class ChaptersController extends BackController
       }
     }
 
+    $this->page->addVar('title', 'Administration');
     $this->page->addVar('listeChapters', $managerChapters->getList(0, $numberChapters));
     $this->page->addVar('listeComments', $listeComments);
     $this->page->addVar('numberReportedComments', $managerComments->countReported());
@@ -103,8 +101,6 @@ class ChaptersController extends BackController
 
   public function processForm(HTTPRequest $request)
   {
-//    var_dump($_FILES);
-//    die;
     $chapters = new Chapters([
       'chapterNumber' => $request->postData('chapterNumber'),
       'title' => $request->postData('title'),
@@ -112,7 +108,6 @@ class ChaptersController extends BackController
       'image' => $request->postData('image')
     ]);
 
-    // L'identifiant du chapitre est transmis si on veut la modifier.
     if ($request->postExists('id'))
     {
       $chapters->setId($request->postData('id'));

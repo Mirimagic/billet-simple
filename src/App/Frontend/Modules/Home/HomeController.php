@@ -14,7 +14,6 @@ class HomeController extends BackController
     $numberChapters = $this->app->config()->get('number_chapters');
     $numberCaracters = $this->app->config()->get('number_caracters');
 
-    // On récupère le manager des chapters.
     $manager = $this->managers->getManagerOf('Chapters');
 
     $listeChapters = $manager->getList(0, $numberChapters);
@@ -31,7 +30,6 @@ class HomeController extends BackController
       }
     }
 
-    // On ajoute la variable $listeChapters à la vue.
     $this->page->addVar('listeChapters', $listeChapters);
     $this->page->addVar('lastChapter', $lastChapter);
     $this->page->addVar('title', 'Accueil');
@@ -72,7 +70,6 @@ class HomeController extends BackController
 
   public function executeInsertComment(HTTPRequest $request)
   {
-    // Si le formulaire a été envoyé.
     if ($request->postExists('author'))
     {
       $comment = new Comment([
@@ -99,7 +96,7 @@ class HomeController extends BackController
 
   public function executeAbout()
   {
-
+    $this->page->addVar('title', 'À propos');
   }
 
   public function executeReported(HTTPRequest $request)

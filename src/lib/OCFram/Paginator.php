@@ -62,7 +62,7 @@ class Paginator
         $end = (($this->_page + $links) < $last) ? $this->_page + $links : $last;
 
         //debugging
-/*        echo '$total: '.$this->_total.' | ';
+/*      echo '$total: '.$this->_total.' | ';
         echo '$row_start: '.$this->_row_start.' | ';
         echo '$limit: '.$this->_limit.' | ';
         echo '$start: '.$start.' | ';

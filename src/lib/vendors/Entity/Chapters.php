@@ -20,9 +20,6 @@ class Chapters extends Entity
     return (!empty($this->title) && !empty($this->content));
   }
 
-
-  // SETTERS //
-
   public function setChapterNumber($chapterNumber)
   {
     $this->chapterNumber = $chapterNumber;
@@ -62,8 +59,6 @@ class Chapters extends Entity
   {
     $this->image = $image;
   }
-
-  // GETTERS //
 
   public function chapterNumber()
   {

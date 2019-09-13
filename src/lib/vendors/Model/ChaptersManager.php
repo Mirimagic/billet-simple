@@ -7,15 +7,15 @@ use \Entity\Chapters;
 abstract class ChaptersManager extends Manager
 {
   /**
-   * Méthode permettant d'ajouter une chapters.
-   * @param $chapters Chapters La chapters à ajouter
+   * Method for add a chapter
+   * @param $chapters Chapters to add
    * @return void
    */
   abstract protected function add(Chapters $chapters);
 
   /**
-   * Méthode permettant d'enregistrer une chapters.
-   * @param $chapters Chapters la chapters à enregistrer
+   * Method for save a chapter
+   * @param $chapters Chapters to save
    * @see self::add()
    * @see self::modify()
    * @return void
@@ -33,38 +33,43 @@ abstract class ChaptersManager extends Manager
   }
 
   /**
-   * Méthode renvoyant le nombre de chapters total.
+   * Method returning the total number of chapters
    * @return int
    */
   abstract public function count();
 
   /**
-   * Méthode permettant de supprimer une chapters.
-   * @param $id int L'identifiant du chapitre à supprimer
+   * Method for delete a chapter
+   * @param $id int Id form the chapter to delete
    * @return void
    */
   abstract public function delete($id);
 
   /**
-   * Méthode retournant une liste de chapters demandée.
-   * @param $start int Le premier chapitre à sélectionner
-   * @param $limite int Le nombre de chapitres à sélectionner
-   * @return array La liste des chapitres. Chaque entrée est une instance de Chapters.
+   * Method returning the chapters ask
+   * @param $start int First chapters select
+   * @param $limite int Number of chapters to select
+   * @return array The list of chapters. Every entry is an instance of Chapter.
    */
   abstract public function getList($start = -1, $limite = -1);
 
   /**
-   * Méthode retournant une chapters précise.
-   * @param $id int L'identifiant de la chapters à récupérer
-   * @return Chapters La chapters demandée
+   * Method returning the chapter select
+   * @param $id int Id of the chapter to select
+   * @return Chapters The chapter ask
    */
   abstract public function getUnique($id);
 
+
+  /**
+   * Methode returning the last chapter creat
+   * @return mixed
+   */
   abstract public function getLast();
 
   /**
-   * Méthode permettant de modifier un chapitre.
-   * @param $chapters chapters la chapters à modifier
+   * Method for update the chapter
+   * @param $chapters chapters the chapter to update
    * @return void
    */
   abstract protected function modify(Chapters $chapters);

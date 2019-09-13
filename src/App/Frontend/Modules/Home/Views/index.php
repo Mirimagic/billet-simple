@@ -19,7 +19,7 @@
             ?>
             <div class="row">
                 <div class="offset-1">
-                    <h3><?=$lastChapter['title']?></h3>
+                    <h3 id="lastChapterTitle"><?=$lastChapter['title']?></h3>
                 </div>
             </div>
             <div class="row">

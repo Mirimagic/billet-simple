@@ -73,7 +73,7 @@ class HomeController extends BackController
     if ($request->postExists('author'))
     {
       $comment = new Comment([
-        'chapters' => $request->getData('chapters'),
+        'chapters' => $request->getData('id'),
         'author' => $request->postData('author'),
         'content' => $request->postData('content')
       ]);
@@ -85,7 +85,7 @@ class HomeController extends BackController
 
         $this->app->user()->setFlash('Le commentaire a bien été ajouté, merci !');
 
-        $this->app->httpResponse()->redirect('chapitre-'.$request->getData('chapters').'.html');
+        $this->app->httpResponse()->redirect('chapitre-'.$request->getData('id').'.html');
       }
       else
       {

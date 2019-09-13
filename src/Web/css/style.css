@@ -140,6 +140,15 @@ footer{
 #lastChapterNumber{
     font-family: 'Advent Pro', Arial, Helvetica, sans-serif;
     font-size: 1.75em;
+    background-color: #00000073;
+    color: white;
+    padding: 0 10px;
+}
+
+#lastChapterTitle{
+  background-color: #00000073;
+  color: white;
+  padding: 0 10px;
 }
 
 /*----OLD CHAPTER----*/

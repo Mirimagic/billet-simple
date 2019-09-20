@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="description" content="Découvrez chaque semaines un nouveau chapitre du futur roman &laquo;Billet simple pour l'Alaska&raquo; de Jean Forteroche. Une aventure pleine de rebondissement sur la terre du soleil de minuit."> <!-- A compléter -->
     <link href="https://fonts.googleapis.com/css?family=Advent+Pro:400,500|Raleway:400,400i,700,700i&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2><?=$chapters['chapterNumber'] != '' ? 'Chapitre ' . $chapters['chapterNumber'] . ' –' : ''?><?=$chapters['title']?></h2>
+                <h2><?=$chapters['chapterNumber'] != '' ? 'Chapitre ' . $chapters['chapterNumber'] . ' – ' : ''?><?=$chapters['title']?></h2>
             </div>
         </div>
         <div class="row">
@@ -90,7 +90,7 @@
         }
         ?>
 
-        <a href="commenter-<?=$chapters['id']?>.html" class="btn btn-primary" id="AddComment"role="button">Ajouter un commentaire</a>
+        <a href="commenter-<?=$chapters['id']?>.html" class="btn btn-primary" id="AddComment" role="button">Ajouter un commentaire</a>
 
     </div>
 </section>

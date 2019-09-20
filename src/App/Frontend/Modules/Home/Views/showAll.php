@@ -27,18 +27,18 @@
                   ?>
                 </div>
                 <div class="col-9">
-                    <h4><?=$chapters['chapterNumber'] != '' ? 'Chapitre ' . $chapters['chapterNumber'] . ' –' : ''?><?=$chapters['title']?></h4>
+                    <h4><?=$chapters['chapterNumber'] != '' ? 'Chapitre ' . $chapters['chapterNumber'] . ' – ' : ''?><?=$chapters['title']?></h4>
                   <?php
                   if (strlen($chapters['content']) > 200)
                   {
                     $start = substr($chapters['content'], 0, 200);
                     $start = substr($start, 0, strrpos($start, ' ')) . '...'; ?>
 
-                    <p><?=strip_tags($start, '<br><strong><em>')?></p>
+                    <p><?=strip_tags($start, '<br>')?></p>
                   <?php
                   } else
                   { ?>
-                    <p><?=strip_tags($chapters['content'], '<br><strong><em>')?></p>
+                    <p><?=strip_tags($chapters['content'], '<br>')?></p>
                   <?php
                   }
                   ?>

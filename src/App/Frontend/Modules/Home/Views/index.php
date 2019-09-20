@@ -72,8 +72,8 @@
                 ?>
             </div>
             <div class="col-9">
-                <h4><?=$chapters['chapterNumber'] != '' ? 'Chapitre ' . $chapters['chapterNumber'] . ' –' : ''?><?=$chapters['title']?></h4>
-                <p><?=strip_tags($chapters['content'], '<br><strong><em>')?></p>
+                <h4><?=$chapters['chapterNumber'] != '' ? 'Chapitre ' . $chapters['chapterNumber'] . ' – ' : ''?><?=$chapters['title']?></h4>
+                <p><?=strip_tags($chapters['content'], '<br>')?></p>
                 <a href="chapitre-<?=$chapters['id']?>.html">Lire la suite</a>
                 <p>Sorti le <?=$chapters['dateAdd']->format('d/m/Y à H:i')?>
                 <?php

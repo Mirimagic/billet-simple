@@ -7,7 +7,7 @@
         </div>
         <div class="row">
             <div class="col-4 mx-auto">
-                <img src="images/JForteroche.png" alt="Jean Forteroche" class="profilPicture">
+                <img src="/images/JForteroche.png" alt="Jean Forteroche" class="profilPicture">
             </div>
         </div>
         <div class="row">

@@ -8,6 +8,13 @@ Vous pouvez retrouver ce projet sur GitHub via ce [lien](https://github.com/Miri
 
 Il a été conçus avec [Docker](https://www.docker.com/) et [Composer](https://getcomposer.org/) pour simplifier la mise en place et avoir de bonnes partiques dans la/les future(s) entreprise(s).
 
+### Accès à l'espace d'administration
+Pour accéder à l'espace d'administration vous pouvez y aller via ce [lien](http://test.mjengeloch.com/admin/)
+
+Login : admin
+
+Mot de passe : mdp
+
 ### Langages et librairies
 Voici la liste des langages utilisés :
 * HTML

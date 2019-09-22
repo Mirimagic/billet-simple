@@ -14,6 +14,7 @@
     <link rel="icon" sizes="96x96" href="/images/favicon/favicon-96.png" type="image/png">
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <title><?= isset($title) ? $title : 'Billet simple pour l\'Alaska' ?></title>
 </head>
 
 <body>
